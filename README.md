@@ -14,6 +14,7 @@
 4. Let person change letter typed after they chose a letter ONLY BEFORE they enter the whole word
 5. Must press a 'check' button to submit and check the word they chose
 6. Automatically move on the to next box after tying into one box
+7. After winning or losing, ot play again, there will be a "play again" button flashing
 
 ## Optional Functionality
 5. Could be fun if they win, make fireworks go off in the background (only if time allows)
@@ -21,6 +22,7 @@
 7. Be able to do language adaptations and select what language to use
     e.g. german, french, latin, italian, dutch
     e.g. american vs british spelling
+8. Could also make it allow more or less guesses!
 
 ## Keeping Track of Things
 1. If win, tell em they won, and can have another go
