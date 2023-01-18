@@ -1,4 +1,5 @@
 # Wordle-Project
+[To play the game, click here](https://xyzhengg.github.io/Wordle-Project/)
 5 letter word
 - need to be able to check letter position if correct or not
     - if correct, append the letter to the whole column where it belongs and highlight green
