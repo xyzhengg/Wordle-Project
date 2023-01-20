@@ -4,3 +4,33 @@ const wordList = ["aback","abase","abate","abbey","abbot","abhor","abide","abled
 const randomWord = wordList[Math.floor(Math.random() * wordList.length)]
 console.log(randomWord)
 
+// Click wordle grid element for typing
+
+let wordleGrid = document.getElementsByClassName('wordle-grid')
+
+// wordleGrid.addEventListener('click', function() {
+    // function onScreenKeyboardFunctions()
+    // function userKeyboardFunctions ()
+// })
+
+//Get keyboard working
+
+
+function onScreenKeyboardFunction () {
+    let output = document.getElementById('r1l1');
+        let keys = document.getElementsByClassName('key');
+        for (let keyElement of keys) {
+            let key = keyElement.textContent;
+            keyElement.addEventListener('click', function() {
+                switch (key) {
+                    case 'Backspace':
+                        output.textContent = output.textContent.slice(0, output.textContent.length-1);
+                        break;
+                    default:
+                        output.textContent += key;
+                }
+                console.log(output.textContent)
+            });
+        }
+    }
+onScreenKeyboardFunction()
