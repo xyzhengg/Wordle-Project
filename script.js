@@ -28,8 +28,8 @@ function onScreenKeyboardFunctionGuess () {
                     }
                     output.textContent += key;
                     guess +=`${output.textContent}`
+                    guess = guess.replaceAll(' ', '')
                     letterCounter ++
-                   
                 }
                 console.log(guess)
                 // console.log(output.textContent)
