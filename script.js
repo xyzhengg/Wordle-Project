@@ -14,7 +14,7 @@ let wordleGrid = document.getElementsByClassName('wordle-grid')
 // })
 
 //Get keyboard working
-function onScreenKeyboardFunction () {
+function onScreenKeyboardFunctionGuess1 () {
         let letterCounter = 0
         let keys = document.getElementsByClassName('key');
         for (let keyElement of keys) {
@@ -25,10 +25,12 @@ function onScreenKeyboardFunction () {
                     case 'Backspace':
                         let removeOutput = document.getElementById(letterCounter)
                         removeOutput.textContent = ''
-
                         letterCounter--
                         break;
                     default:
+                        if (letterCounter ===5) {
+                            break
+                        }
                         output.textContent += key;
                         letterCounter ++
                 } console.log(output.textContent)
@@ -36,5 +38,35 @@ function onScreenKeyboardFunction () {
             }) 
         } 
     }
-    
-onScreenKeyboardFunction()
+onScreenKeyboardFunctionGuess1()
+
+// document.getElementById('submit').addEventListener('click', function () {
+//  document.getElementById('submit1').id = `${submit}1  +1`
+// })
+
+function onScreenKeyboardFunctionGuess2 () {
+    let letterCounter = 6
+    let keys = document.getElementsByClassName('key');
+    for (let keyElement of keys) {
+        let key = keyElement.textContent;
+        keyElement.addEventListener('click', function() {
+            let output = document.getElementById(letterCounter+1);
+            switch (key) {
+                case 'Backspace':
+                    let removeOutput = document.getElementById(letterCounter)
+                    removeOutput.textContent = ''
+                    letterCounter--
+                    break;
+                default:
+                    if (letterCounter === 9) {
+                        output.textContent = ''
+                        letterCounter--
+                    }
+                    output.textContent += key;
+                    letterCounter ++
+            } console.log(output.textContent)
+            console.log(letterCounter)
+        }) 
+    } 
+}
+
