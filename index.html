@@ -21,7 +21,7 @@
             <ul>
                 <li>If a letter in your guess is in the <span class='right'>RIGHT</span> position, the tile will turn <span class="green">green</span></li>
                 <li>If a letter in your guess is in the word but <span class='not'>NOT</span> in the right position, it will turn <span class="orange">orange</span></li>
-                <li>If a letter in your guess is <span class='wrong'>WRONG</span> and in the word at all, it will turn <span class="grey">grey</span></li>
+                <li>If a letter in your guess is <span class='wrong'>WRONG</span> and not in the word at all, it will turn <span class="grey">grey</span></li>
             </ul>
         </section>
         <nav>
@@ -33,104 +33,109 @@
         <section class="wordle-grid">
             <div class="word1">
                 <div class="row1">
-                    <p class="letter1 output" id="r1l1"></p>
+                    <p class="letter1 output" id="1"></p>
                 </div>
                 <div class="row1">
-                    <p class="letter2 output" id="r1l2"></p>
+                    <p class="letter2 output" id="2"></p>
                 </div>
                 <div class="row1">
-                    <p class="letter3 output" id="r1l3"></p>
+                    <p class="letter3 output" id="3"></p>
                 </div>
                 <div class="row1">
-                    <p class="letter4 output" id="r1l4"></p>
+                    <p class="letter4 output" id="4"></p>
                 </div>
                 <div class="row1">
-                    <p class="letter5 output" id="r1l5"></p>
+                    <p class="letter5 output" id="5"></p>
                 </div>
+                    <p class="blind" id="6"></p>
             </div>
             <div class="word2">
                 <div class="row2">
-                    <p class="letter1 output" id="r2l1"></p>
+                    <p class="letter1 output" id="7"></p>
                 </div>
                 <div class="row2">
-                    <p class="letter2 output" id="r2l2"></p>
+                    <p class="letter2 output" id="8"></p>
                 </div>
                 <div class="row2">
-                    <p class="letter3 output" id="r2l3"></p>
+                    <p class="letter3 output" id="9"></p>
                 </div>
                 <div class="row2">
-                    <p class="letter4 output" id="r2l4"></p>
+                    <p class="letter4 output" id="10"></p>
                 </div>
                 <div class="row2">
-                    <p class="letter5 output" id="r2l5"></p>
+                    <p class="letter5 output" id="11"></p>
                 </div>
+                <p class="blind" id="12"></p>
             </div>
             <div class="word3">
                 <div class="row3">
-                    <p class="letter1 output" id="r3l1"></p>
+                    <p class="letter1 output" id="13"></p>
                 </div>
                 <div class="row3">
-                    <p class="letter2 output" id="r3l2"></p>
+                    <p class="letter2 output" id="14"></p>
                 </div>
                 <div class="row3">
-                    <p class="letter3 output" id="r3l3"></p>
+                    <p class="letter3 output" id="15"></p>
                 </div>
                 <div class="row3">
-                    <p class="letter4 output" id="r3l4"> </p>
+                    <p class="letter4 output" id="16"> </p>
                 </div>
                 <div class="row3">
-                    <p class="letter5 output" id="r3l5"></p>
+                    <p class="letter5 output" id="17"></p>
                 </div>
+                <p class="blind" id="18"></p>
             </div>
             <div class="word4">
                 <div class="row4">
-                    <p class="letter1 output" id="r4l1"></p>
+                    <p class="letter1 output" id="19"></p>
                 </div>
                 <div class="row4">
-                    <p class="letter2 output" id="r4l2"></p>
+                    <p class="letter2 output" id="20"></p>
                 </div>
                 <div class="row4">
-                    <p class="letter3 output" id="r4l3"></p>
+                    <p class="letter3 output" id="21"></p>
                 </div>
                 <div class="row4">
-                    <p class="letter4 output" id="r4l4"></p>
+                    <p class="letter4 output" id="22"></p>
                 </div>
                 <div class="row4">
-                    <p class="letter5 output" id="r4l5"></p>
+                    <p class="letter5 output" id="23"></p>
                 </div>
+                <p class="blind" id="24"></p>
             </div>
             <div class="word5">
                 <div class="row5">
-                    <p class="letter1 output" id="r5l1"></p>
+                    <p class="letter1 output" id="25"></p>
                 </div>
                 <div class="row5">
-                    <p class="letter2 output" id="r5l2"></p>
+                    <p class="letter2 output" id="26"></p>
                 </div>
                 <div class="row5">
-                    <p class="letter3 output" id="r5l3"></p>
+                    <p class="letter3 output" id="27"></p>
                 </div>
                 <div class="row5">
-                    <p class="letter4 output" id="r5l4"></p>
+                    <p class="letter4 output" id="28"></p>
                 </div>
                 <div class="row5" >
-                    <p class="letter5 output"id="r5l5"></p>
+                    <p class="letter5 output"id="29"></p>
                 </div>
+                <p class="blind" id="30"></p>
             </div>
             <div class="theanswer">
                 <div class="answer">
-                    <p class="letter1 output" id="ansl1"></p>
+                    <p class="letter1 output" id="ans1"></p>
                 </div>
                 <div class="answer">
-                    <p class="letter2 output" id="ansl2"></p>
+                    <p class="letter2 output" id="ans2"></p>
                 </div>
                 <div class="answer">
-                    <p class="letter3 output" id="ansl3"></p>
+                    <p class="letter3 output" id="ans3"></p>
                 </div>
                 <div class="answer">
-                    <p class="letter4 output" id="ansl4"></p>
+                    <p class="letter4 output" id="ans4"></p>
                 </div>
                 <div class="answer">
-                    <p class="letter5 output" id="ansl5"></p>
+                    <p class="letter5 output" id="ans5"></p>
                 </div>
             </div>
         </section>
@@ -171,7 +176,7 @@
             </div>
         </section>
         <section>
-            <button class="submit" >Submit</button>
+            <button id="submit" >Submit</button>
 
         </section>
         <footer>
