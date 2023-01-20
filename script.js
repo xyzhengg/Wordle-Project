@@ -14,23 +14,27 @@ let wordleGrid = document.getElementsByClassName('wordle-grid')
 // })
 
 //Get keyboard working
-
-
 function onScreenKeyboardFunction () {
-    let output = document.getElementById('r1l1');
+        let letterCounter = 0
         let keys = document.getElementsByClassName('key');
         for (let keyElement of keys) {
             let key = keyElement.textContent;
             keyElement.addEventListener('click', function() {
+                let output = document.getElementById(letterCounter+1);
                 switch (key) {
                     case 'Backspace':
-                        output.textContent = output.textContent.slice(0, output.textContent.length-1);
+                        let removeOutput = document.getElementById(letterCounter)
+                        removeOutput.textContent = ''
+
+                        letterCounter--
                         break;
                     default:
                         output.textContent += key;
-                }
-                console.log(output.textContent)
-            });
-        }
+                        letterCounter ++
+                } console.log(output.textContent)
+                console.log(letterCounter)
+            }) 
+        } 
     }
+    
 onScreenKeyboardFunction()
