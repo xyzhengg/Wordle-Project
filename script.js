@@ -18,7 +18,7 @@ function onScreenKeyboardFunctionGuess () {
             switch (key) {
                 case 'Backspace':
                     let removeOutput = document.getElementById(letterCounter)
-                    removeOutput.textContent = '';
+                    removeOutput.textContent =``;
                     guess = guess.slice(0,-1)
                     letterCounter--
                     break;
@@ -38,7 +38,17 @@ function onScreenKeyboardFunctionGuess () {
         }
     }
 let submit = document.getElementById('submit')
-submit.addEventListener('click', switchingSubmitFunctions)
+submit.addEventListener('click', checkGuess)
+// submit.addEventListener('click', switchingSubmitFunctions)
+
+    function checkGuess() {
+        if (wordList.includes(guess.toLowerCase())) {
+            guess=''
+            switchingSubmitFunctions()
+        } else if (!wordList.includes(guess.toLowerCase())){
+            alert("That's not a real word. Try again")
+        }
+    }
 
     function submitFirstGuess () {
         for (let i=1; i<=6; i++) {
