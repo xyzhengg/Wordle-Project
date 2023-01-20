@@ -4,48 +4,12 @@ const wordList = ["aback","abase","abate","abbey","abbot","abhor","abide","abled
 const randomWord = wordList[Math.floor(Math.random() * wordList.length)]
 console.log(randomWord)
 
-// Click wordle grid element for typing
-
-let wordleGrid = document.getElementsByClassName('wordle-grid')
-
-// wordleGrid.addEventListener('click', function() {
-    // function onScreenKeyboardFunctions()
-    // function userKeyboardFunctions ()
-// })
-
 //Get keyboard working
-function onScreenKeyboardFunctionGuess1 () {
-        let letterCounter = 0
-        let keys = document.getElementsByClassName('key');
-        for (let keyElement of keys) {
-            let key = keyElement.textContent;
-            keyElement.addEventListener('click', function() {
-                let output = document.getElementById(letterCounter+1);
-                switch (key) {
-                    case 'Backspace':
-                        let removeOutput = document.getElementById(letterCounter)
-                        removeOutput.textContent = ''
-                        letterCounter--
-                        break;
-                    default:
-                        if (letterCounter ===5) {
-                            break
-                        }
-                        output.textContent += key;
-                        letterCounter ++
-                } console.log(output.textContent)
-                console.log(letterCounter)
-            }) 
-        } 
-    }
-onScreenKeyboardFunctionGuess1()
 
-// document.getElementById('submit').addEventListener('click', function () {
-//  document.getElementById('submit1').id = `${submit}1  +1`
-// })
-
-function onScreenKeyboardFunctionGuess2 () {
-    let letterCounter = 6
+let letterCounter = 0
+let guess = ''
+onScreenKeyboardFunctionGuess()
+function onScreenKeyboardFunctionGuess () {
     let keys = document.getElementsByClassName('key');
     for (let keyElement of keys) {
         let key = keyElement.textContent;
@@ -54,19 +18,69 @@ function onScreenKeyboardFunctionGuess2 () {
             switch (key) {
                 case 'Backspace':
                     let removeOutput = document.getElementById(letterCounter)
-                    removeOutput.textContent = ''
+                    removeOutput.textContent = '';
+                    guess = guess.slice(0,-1)
                     letterCounter--
                     break;
                 default:
-                    if (letterCounter === 9) {
-                        output.textContent = ''
-                        letterCounter--
+                    if (letterCounter === 5 || letterCounter===11 || letterCounter === 17 || letterCounter === 23 || letterCounter === 29) {
+                    break
                     }
                     output.textContent += key;
+                    guess +=`${output.textContent}`
                     letterCounter ++
-            } console.log(output.textContent)
-            console.log(letterCounter)
-        }) 
+                   
+                }
+                console.log(guess)
+                // console.log(output.textContent)
+                console.log(letterCounter)
+            }) 
+        }
+    }
+let submit = document.getElementById('submit')
+submit.addEventListener('click', switchingSubmitFunctions)
+
+    function submitFirstGuess () {
+        for (let i=1; i<=6; i++) {
+        document.getElementById(i).id = "submitted"
+        }
+        letterCounter = 6
     } 
-}
+
+    function submitSecondGuess () {
+        for (let i=7; i<=12; i++) {
+        document.getElementById(i).id = "submitted"
+        }
+        letterCounter = 12
+    } 
+
+    function submitThirdGuess () {
+        for (let i=13; i<=18; i++) {
+        document.getElementById(i).id = "submitted"
+        }
+        letterCounter = 18
+    } 
+
+    function submitFourthGuess () {
+        for (let i=19; i<=24; i++) {
+        document.getElementById(i).id = "submitted"
+        }
+        letterCounter = 24
+    } 
+
+    function submitFifthGuess () {
+        for (let i=25; i<=30; i++) {
+        document.getElementById(i).id = "submitted"
+        }
+        letterCounter = 30
+    } 
+
+    const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess]
+
+    let submitFunction = 0
+
+    function switchingSubmitFunctions() {
+        allSubmitFunctions[submitFunction]()
+        submitFunction = submitFunction+1
+    }
 
