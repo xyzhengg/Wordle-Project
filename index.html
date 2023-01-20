@@ -13,15 +13,15 @@
         <h1> Let's play Wordle! </h1>
         <h3> Instructions</h3>
         <section class="instructions">
-            <p> Wordle is a 5 letter word guessing game.</p>
-            <p> You have 5 tries to guess the word.</p>
+            <p>Wordle is a 5 letter word guessing game.</p>
+            <p>You have 5 tries to guess the word.</p>
             <p>Each guess must be a valid 5 letter word.</p>
             <p>Press the "Submit" button to submit each guess.</p>
             <p>After each guess, the colour of the tiles will change:</p>
             <ul>
-                <li>If a letter in your guess is in the RIGHT position, the tile will turn green</li>
-                <li>If a letter in your guess is in the word but in the WRONG position, it will turn orange</li>
-                <li>If a letter in your guess is NOT in the word at all, it will turn grey</li>
+                <li>If a letter in your guess is in the <span class='right'>RIGHT</span> position, the tile will turn <span class="green">green</span></li>
+                <li>If a letter in your guess is in the word but <span class='not'>NOT</span> in the right position, it will turn <span class="orange">orange</span></li>
+                <li>If a letter in your guess is <span class='wrong'>WRONG</span> and in the word at all, it will turn <span class="grey">grey</span></li>
             </ul>
         </section>
         <nav>
@@ -32,142 +32,142 @@
         
         <section class="wordle-grid">
             <div class="word1">
-                <div class="row1" id="r1l1">
-                    <p class="letter1"></p>
+                <div class="row1">
+                    <p class="letter1 output" id="r1l1"></p>
                 </div>
-                <div class="row1" id="r1l2">
-                    <p class="letter2"></p>
+                <div class="row1">
+                    <p class="letter2 output" id="r1l2"></p>
                 </div>
-                <div class="row1" id="r1l3">
-                    <p class="letter3"></p>
+                <div class="row1">
+                    <p class="letter3 output" id="r1l3"></p>
                 </div>
-                <div class="row1" id="r1l4">
-                    <p class="letter4"></p>
+                <div class="row1">
+                    <p class="letter4 output" id="r1l4"></p>
                 </div>
-                <div class="row1" id="r1l5">
-                    <p class="letter5"></p>
+                <div class="row1">
+                    <p class="letter5 output" id="r1l5"></p>
                 </div>
             </div>
             <div class="word2">
-                <div class="row2" id="r2l1">
-                    <p class="letter1"></p>
+                <div class="row2">
+                    <p class="letter1 output" id="r2l1"></p>
                 </div>
-                <div class="row2" id="r2l2">
-                    <p class="letter2"></p>
+                <div class="row2">
+                    <p class="letter2 output" id="r2l2"></p>
                 </div>
-                <div class="row2" id="r2l3">
-                    <p class="letter3"></p>
+                <div class="row2">
+                    <p class="letter3 output" id="r2l3"></p>
                 </div>
-                <div class="row2" id="r2l4">
-                    <p class="letter4"></p>
+                <div class="row2">
+                    <p class="letter4 output" id="r2l4"></p>
                 </div>
-                <div class="row2" id="r2l5">
-                    <p class="letter5"></p>
+                <div class="row2">
+                    <p class="letter5 output" id="r2l5"></p>
                 </div>
             </div>
             <div class="word3">
-                <div class="row3" id="r3l1">
-                    <p class="letter1"></p>
+                <div class="row3">
+                    <p class="letter1 output" id="r3l1"></p>
                 </div>
-                <div class="row3" id="r3l2">
-                    <p class="letter2"></p>
+                <div class="row3">
+                    <p class="letter2 output" id="r3l2"></p>
                 </div>
-                <div class="row3" id="r3l3">
-                    <p class="letter3"></p>
+                <div class="row3">
+                    <p class="letter3 output" id="r3l3"></p>
                 </div>
-                <div class="row3" id="r3l4">
-                    <p class="letter4"></p>
+                <div class="row3">
+                    <p class="letter4 output" id="r3l4"> </p>
                 </div>
-                <div class="row3" id="r3l5">
-                    <p class="letter5"></p>
+                <div class="row3">
+                    <p class="letter5 output" id="r3l5"></p>
                 </div>
             </div>
             <div class="word4">
-                <div class="row4" id="r4l1">
-                    <p class="letter1"></p>
+                <div class="row4">
+                    <p class="letter1 output" id="r4l1"></p>
                 </div>
-                <div class="row4" id="r4l2">
-                    <p class="letter2"></p>
+                <div class="row4">
+                    <p class="letter2 output" id="r4l2"></p>
                 </div>
-                <div class="row4" id="r4l3">
-                    <p class="letter3"></p>
+                <div class="row4">
+                    <p class="letter3 output" id="r4l3"></p>
                 </div>
-                <div class="row4" id="r4l4">
-                    <p class="letter4"></p>
+                <div class="row4">
+                    <p class="letter4 output" id="r4l4"></p>
                 </div>
-                <div class="row4" id="r4l5">
-                    <p class="letter5"></p>
+                <div class="row4">
+                    <p class="letter5 output" id="r4l5"></p>
                 </div>
             </div>
             <div class="word5">
-                <div class="row5" id="r5l1">
-                    <p class="letter1"></p>
+                <div class="row5">
+                    <p class="letter1 output" id="r5l1"></p>
                 </div>
-                <div class="row5" id="r5l2">
-                    <p class="letter2"></p>
+                <div class="row5">
+                    <p class="letter2 output" id="r5l2"></p>
                 </div>
-                <div class="row5" id="r5l3">
-                    <p class="letter3"></p>
+                <div class="row5">
+                    <p class="letter3 output" id="r5l3"></p>
                 </div>
-                <div class="row5" id="r5l4">
-                    <p class="letter4"></p>
+                <div class="row5">
+                    <p class="letter4 output" id="r5l4"></p>
                 </div>
-                <div class="row5" id="r5l5">
-                    <p class="letter5"></p>
+                <div class="row5" >
+                    <p class="letter5 output"id="r5l5"></p>
                 </div>
             </div>
             <div class="theanswer">
-                <div class="answer" id="ansl1">
-                    <p class="letter1"></p>
+                <div class="answer">
+                    <p class="letter1 output" id="ansl1"></p>
                 </div>
-                <div class="answer" id="ansl2">
-                    <p class="letter2"></p>
+                <div class="answer">
+                    <p class="letter2 output" id="ansl2"></p>
                 </div>
-                <div class="answer" id="ansl3">
-                    <p class="letter3"></p>
+                <div class="answer">
+                    <p class="letter3 output" id="ansl3"></p>
                 </div>
-                <div class="answer" id="ansl4">
-                    <p class="letter4"></p>
+                <div class="answer">
+                    <p class="letter4 output" id="ansl4"></p>
                 </div>
-                <div class="answer" id="ansl5">
-                    <p class="letter5"></p>
+                <div class="answer">
+                    <p class="letter5 output" id="ansl5"></p>
                 </div>
             </div>
         </section>
 
         <section class= "keyboard">
             <div class="keyboard-row1">
-                <button class="q">Q</button>
-                <button class="w">W</button>
-                <button class="e">E</button>
-                <button class="r">R</button>
-                <button class="t">T</button>
-                <button class="y">Y</button>
-                <button class="u">U</button>
-                <button class="i">I</button>
-                <button class="o">O</button>
-                <button class="p">P</button>
+                <button class="key">Q</button>
+                <button class="key">W</button>
+                <button class="key">E</button>
+                <button class="key">R</button>
+                <button class="key">T</button>
+                <button class="key">Y</button>
+                <button class="key">U</button>
+                <button class="key">I</button>
+                <button class="key">O</button>
+                <button class="key">P</button>
             </div>
             <div class="keyboard-row2">
-                <button class="a">A</button>
-                <button class="s">S</button>
-                <button class="d">D</button>
-                <button class="f">F</button>
-                <button class="g">G</button>
-                <button class="h">H</button>
-                <button class="j">J</button>
-                <button class="k">K</button>
-                <button class="l">L</button>
+                <button class="key">A</button>
+                <button class="key">S</button>
+                <button class="key">D</button>
+                <button class="key">F</button>
+                <button class="key">G</button>
+                <button class="key">H</button>
+                <button class="key">J</button>
+                <button class="key">K</button>
+                <button class="key">L</button>
             </div>
             <div class="keyboard-row3">
-                <button class="z">Z</button>
-                <button class="x">X</button>
-                <button class="c">C</button>
-                <button class="v">V</button>
-                <button class="b">B</button>
-                <button class="n">N</button>
-                <button class="m">M</button>
-                <button class="backspace">Backspace</button>
+                <button class="key">Z</button>
+                <button class="key">X</button>
+                <button class="key">C</button>
+                <button class="key">V</button>
+                <button class="key">B</button>
+                <button class="key">N</button>
+                <button class="key">M</button>
+                <button class="key" id="backspace">Backspace</button>
             </div>
         </section>
         <section>
