@@ -60,13 +60,6 @@ function win() {
     } streak.innerText = streakCounter
 }
 
-function lose() {
-    if ((guess.toLowerCase() !== randomWord) && (document.getElementById(35).innerText !== '')){
-        document.querySelector('.win').innerText = "YOU LOST"
-        streakCounter = 0
-    } streak.innerText = streakCounter
-}
-
 function submitFirstGuess () {
     let randomWordIndex = 0
     for (let i=1; i<=5; i++) {
@@ -184,8 +177,17 @@ function submitSixthGuess () {
     }
     letterCounter = 36
     win()
+    function lose() {
+    // let lastLetter = document.querySelector("#35")
+    if ((guess.toLowerCase() !== randomWord) && (document.getElementById("35").innerText !== '')){
+        document.querySelector('.win').innerText = "YOU LOST"
+        streakCounter = 0
+    } streak.innerText = streakCounter
+    }
     lose()
 } 
+
+
 
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
 let submitFunction = 0
