@@ -49,11 +49,23 @@ function checkGuess() {
      } 
 }
 
+let streakCounter = 0
+let streak = document.getElementById('streak')
+streak.innerText = streakCounter
+
+
+// setTimeout(
+// function win() {
+//     if (guess.toLowerCase() === randomWord){
+//         alert("You WIN!")
+//     } return
+// }, 5000)
+
 function win() {
-if  (guess.toLowerCase() === randomWord) {
-    // document.querySelectorAll('.row1').style.backgroundColor = "green";
-    alert("You WIN!")
-    }
+    if (guess.toLowerCase() === randomWord){
+        alert("You WIN!")
+        streakCounter++
+    } 
 }
 
 function submitFirstGuess () {
@@ -62,6 +74,7 @@ function submitFirstGuess () {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
             character.parentElement.style.backgroundColor = "green";
+            
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
@@ -76,83 +89,103 @@ function submitFirstGuess () {
 }
     
 function submitSecondGuess () {
+    let randomWordIndex = 0
     for (let i=7; i<=11; i++) {
         let character = document.getElementById(i)
-        for (let j=0; j<5; j++) { 
-            if (character.innerText.toLowerCase() === randomWord[j]) {
-                console.log(randomWord[j])
-                character.parentElement.style.backgroundColor = "green";
-                win()
-            }
+        if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
+            character.parentElement.style.backgroundColor = "green";
+            
+        } else if 
+       (randomWord.includes(character.innerText.toLowerCase())) {
+            character.parentElement.style.backgroundColor = "orange";
+        } else {
+        character.parentElement.style.backgroundColor = "grey";
         }
         character.id = "submitted"
+        randomWordIndex++
     }
     letterCounter = 12
+    win()
 } 
 
 function submitThirdGuess () {
+    let randomWordIndex = 0
     for (let i=13; i<=17; i++) {
         let character = document.getElementById(i)
-        for (let j=0; j<5; j++) { 
-            if (character.innerText.toLowerCase() === randomWord[j]) {
-                console.log(randomWord[j])
-                character.parentElement.style.backgroundColor = "green";
-                win()
-            }
-            // } else if (character.innerText.toLowerCase().includes(randomWord[j])) {
-            //     character.parentElement.style.backgroundColor = "orange";
-            // } else {
-            //     character.parentElement.style.backgroundColor = "red";
-            // }
+        if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
+            character.parentElement.style.backgroundColor = "green";
+            
+        } else if 
+       (randomWord.includes(character.innerText.toLowerCase())) {
+            character.parentElement.style.backgroundColor = "orange";
+        } else {
+        character.parentElement.style.backgroundColor = "grey";
         }
         character.id = "submitted"
+        randomWordIndex++
     }
     letterCounter = 18
+    win()
 } 
 
 function submitFourthGuess () {
+    let randomWordIndex = 0
     for (let i=19; i<=23; i++) {
         let character = document.getElementById(i)
-        for (let j=0; j<5; j++) { 
-            if (character.innerText.toLowerCase() === randomWord[j]) {
-                console.log(randomWord[j])
-                character.parentElement.style.backgroundColor = "green";
-                win()
-            }
+        if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
+            character.parentElement.style.backgroundColor = "green";
+            
+        } else if 
+       (randomWord.includes(character.innerText.toLowerCase())) {
+            character.parentElement.style.backgroundColor = "orange";
+        } else {
+        character.parentElement.style.backgroundColor = "grey";
         }
         character.id = "submitted"
+        randomWordIndex++
     }
     letterCounter = 24
+    win()
 } 
 
 function submitFifthGuess () {
+    let randomWordIndex = 0
     for (let i=25; i<=29; i++) {
         let character = document.getElementById(i)
-        for (let j=0; j<5; j++) { 
-            if (character.innerText.toLowerCase() === randomWord[j]) {
-                console.log(randomWord[j])
-                character.parentElement.style.backgroundColor = "green";
-                 win()
-            }
+        if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
+            character.parentElement.style.backgroundColor = "green";
+            
+        } else if 
+       (randomWord.includes(character.innerText.toLowerCase())) {
+            character.parentElement.style.backgroundColor = "orange";
+        } else {
+        character.parentElement.style.backgroundColor = "grey";
         }
         character.id = "submitted"
+        randomWordIndex++
     }
     letterCounter = 30
+    win()
 } 
 
 function submitSixthGuess () {
+    let randomWordIndex = 0
     for (let i=31; i<=35; i++) {
         let character = document.getElementById(i)
-        for (let j=0; j<5; j++) { 
-            if (randomWord[j] === character.innerText.toLowerCase()) {
-                console.log(randomWord[j])
-                character.parentElement.style.backgroundColor = "green";
-                 win()
-            }
+        if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
+            character.parentElement.style.backgroundColor = "green";
+            
+        } else if 
+       (randomWord.includes(character.innerText.toLowerCase())) {
+            character.parentElement.style.backgroundColor = "orange";
+        } else {
+        character.parentElement.style.backgroundColor = "grey";
         }
         character.id = "submitted"
+        randomWordIndex++
     }
     letterCounter = 36
+    win()
 } 
 
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
