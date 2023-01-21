@@ -53,19 +53,18 @@ let streakCounter = 0
 let streak = document.getElementById('streak')
 streak.innerText = streakCounter
 
-
-// setTimeout(
-// function win() {
-//     if (guess.toLowerCase() === randomWord){
-//         alert("You WIN!")
-//     } return
-// }, 5000)
-
 function win() {
     if (guess.toLowerCase() === randomWord){
-        alert("You WIN!")
+        document.querySelector('.win').innerText = "WINNER"
         streakCounter++
-    } 
+    } streak.innerText = streakCounter
+}
+
+function lose() {
+    if ((guess.toLowerCase() !== randomWord) && (document.getElementById(35).innerText !== '')){
+        document.querySelector('.win').innerText = "YOU LOST"
+        streakCounter = 0
+    } streak.innerText = streakCounter
 }
 
 function submitFirstGuess () {
@@ -74,7 +73,6 @@ function submitFirstGuess () {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
             character.parentElement.style.backgroundColor = "green";
-            
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
@@ -186,6 +184,7 @@ function submitSixthGuess () {
     }
     letterCounter = 36
     win()
+    lose()
 } 
 
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
