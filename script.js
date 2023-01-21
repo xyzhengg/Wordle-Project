@@ -39,56 +39,90 @@ function onScreenKeyboardFunctionGuess () {
 let submit = document.getElementById('submit')
 submit.addEventListener('click', checkGuess)
 
-    function checkGuess() {
-        if (wordList.includes(guess.toLowerCase())) {
-            guess=''
-            switchingSubmitFunctions()
-        } else if (!wordList.includes(guess.toLowerCase())){
-            alert("That's not a real word. Try again")
-        }
-    }
+function checkGuess() {
+    if (!wordList.includes(guess.toLowerCase())){
+        alert("That's not a real word. Try again")
+    } else if (wordList.includes(guess.toLowerCase())) {
+        switchingSubmitFunctions()
+        guess=''
+     } 
+}
 
-    function submitFirstGuess () {
-        for (let i=1; i<=6; i++) {
-        document.getElementById(i).id = "submitted"
+function submitFirstGuess () {
+    for (let i=1; i<=6; i++) {
+        let character = document.getElementById(i)
+            for (let j=0; j<5; j++) { 
+                if (character.innerText.toLowerCase() === randomWord[j]) {
+                    console.log(randomWord[j])
+                    character.parentElement.style.backgroundColor = "green";
+                }
+            }
+            character.id = "submitted"
         }
         letterCounter = 6
-    } 
+    }
+    
 
-    function submitSecondGuess () {
-        for (let i=7; i<=12; i++) {
-        document.getElementById(i).id = "submitted"
+function submitSecondGuess () {
+    for (let i=7; i<=12; i++) {
+        let character = document.getElementById(i)
+        for (let j=0; j<5; j++) { 
+            if (character.innerText.toLowerCase() === randomWord[j]) {
+                console.log(randomWord[j])
+                character.parentElement.style.backgroundColor = "green";
+            }
         }
-        letterCounter = 12
-    } 
+        character.id = "submitted"
+    }
+    letterCounter = 12
+} 
 
-    function submitThirdGuess () {
-        for (let i=13; i<=18; i++) {
-        document.getElementById(i).id = "submitted"
+function submitThirdGuess () {
+    for (let i=13; i<=18; i++) {
+        let character = document.getElementById(i)
+        for (let j=0; j<5; j++) { 
+            if (character.innerText.toLowerCase() === randomWord[j]) {
+                console.log(randomWord[j])
+                character.parentElement.style.backgroundColor = "green";
+            }
         }
-        letterCounter = 18
-    } 
+        character.id = "submitted"
+    }
+    letterCounter = 18
+} 
 
-    function submitFourthGuess () {
-        for (let i=19; i<=24; i++) {
-        document.getElementById(i).id = "submitted"
+function submitFourthGuess () {
+    for (let i=19; i<=24; i++) {
+        let character = document.getElementById(i)
+        for (let j=0; j<5; j++) { 
+            if (character.innerText.toLowerCase() === randomWord[j]) {
+                console.log(randomWord[j])
+                character.parentElement.style.backgroundColor = "green";
+            }
         }
-        letterCounter = 24
-    } 
+        character.id = "submitted"
+    }
+    letterCounter = 24
+} 
 
-    function submitFifthGuess () {
-        for (let i=25; i<=30; i++) {
-        document.getElementById(i).id = "submitted"
+function submitFifthGuess () {
+    for (let i=25; i<=30; i++) {
+        let character = document.getElementById(i)
+        for (let j=0; j<5; j++) { 
+            if (character.innerText.toLowerCase() === randomWord[j]) {
+                console.log(randomWord[j])
+                character.parentElement.style.backgroundColor = "green";
+            }
         }
-        letterCounter = 30
-    } 
+        character.id = "submitted"
+    }
+    letterCounter = 30
+} 
 
-    const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess]
-
-    let submitFunction = 0
-
-    function switchingSubmitFunctions() {
-        allSubmitFunctions[submitFunction]()
-        submitFunction = submitFunction+1
+const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess]
+let submitFunction = 0
+function switchingSubmitFunctions() {
+    allSubmitFunctions[submitFunction]()
+    submitFunction = submitFunction+1
     }
 
