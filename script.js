@@ -32,7 +32,8 @@ function onScreenKeyboardFunctionGuess () {
                     letterCounter ++
                 }
                 console.log(guess)
-                console.log(letterCounter)
+                // console.log(letterCounter)
+                // console.log(output.textContent)
             }) 
         }
     }
@@ -48,28 +49,40 @@ function checkGuess() {
      } 
 }
 
-function submitFirstGuess () {
-    for (let i=1; i<=6; i++) {
-        let character = document.getElementById(i)
-            for (let j=0; j<5; j++) { 
-                if (character.innerText.toLowerCase() === randomWord[j]) {
-                    console.log(randomWord[j])
-                    character.parentElement.style.backgroundColor = "green";
-                }
-            }
-            character.id = "submitted"
-        }
-        letterCounter = 6
+function win() {
+if  (guess.toLowerCase() === randomWord) {
+    // document.querySelectorAll('.row1').style.backgroundColor = "green";
+    alert("You WIN!")
     }
-    
+}
 
+function submitFirstGuess () {
+    let randomWordIndex = 0
+    for (let i=1; i<=5; i++) {
+        let character = document.getElementById(i)
+        if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
+            character.parentElement.style.backgroundColor = "green";
+        } else if 
+       (randomWord.includes(character.innerText.toLowerCase())) {
+            character.parentElement.style.backgroundColor = "orange";
+        } else {
+        character.parentElement.style.backgroundColor = "grey";
+        }
+        character.id = "submitted"
+        randomWordIndex++
+    }
+    letterCounter = 6
+    win()
+}
+    
 function submitSecondGuess () {
-    for (let i=7; i<=12; i++) {
+    for (let i=7; i<=11; i++) {
         let character = document.getElementById(i)
         for (let j=0; j<5; j++) { 
             if (character.innerText.toLowerCase() === randomWord[j]) {
                 console.log(randomWord[j])
                 character.parentElement.style.backgroundColor = "green";
+                win()
             }
         }
         character.id = "submitted"
@@ -78,13 +91,19 @@ function submitSecondGuess () {
 } 
 
 function submitThirdGuess () {
-    for (let i=13; i<=18; i++) {
+    for (let i=13; i<=17; i++) {
         let character = document.getElementById(i)
         for (let j=0; j<5; j++) { 
             if (character.innerText.toLowerCase() === randomWord[j]) {
                 console.log(randomWord[j])
                 character.parentElement.style.backgroundColor = "green";
+                win()
             }
+            // } else if (character.innerText.toLowerCase().includes(randomWord[j])) {
+            //     character.parentElement.style.backgroundColor = "orange";
+            // } else {
+            //     character.parentElement.style.backgroundColor = "red";
+            // }
         }
         character.id = "submitted"
     }
@@ -92,12 +111,13 @@ function submitThirdGuess () {
 } 
 
 function submitFourthGuess () {
-    for (let i=19; i<=24; i++) {
+    for (let i=19; i<=23; i++) {
         let character = document.getElementById(i)
         for (let j=0; j<5; j++) { 
             if (character.innerText.toLowerCase() === randomWord[j]) {
                 console.log(randomWord[j])
                 character.parentElement.style.backgroundColor = "green";
+                win()
             }
         }
         character.id = "submitted"
@@ -106,12 +126,13 @@ function submitFourthGuess () {
 } 
 
 function submitFifthGuess () {
-    for (let i=25; i<=30; i++) {
+    for (let i=25; i<=29; i++) {
         let character = document.getElementById(i)
         for (let j=0; j<5; j++) { 
             if (character.innerText.toLowerCase() === randomWord[j]) {
                 console.log(randomWord[j])
                 character.parentElement.style.backgroundColor = "green";
+                 win()
             }
         }
         character.id = "submitted"
@@ -119,7 +140,22 @@ function submitFifthGuess () {
     letterCounter = 30
 } 
 
-const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess]
+function submitSixthGuess () {
+    for (let i=31; i<=35; i++) {
+        let character = document.getElementById(i)
+        for (let j=0; j<5; j++) { 
+            if (randomWord[j] === character.innerText.toLowerCase()) {
+                console.log(randomWord[j])
+                character.parentElement.style.backgroundColor = "green";
+                 win()
+            }
+        }
+        character.id = "submitted"
+    }
+    letterCounter = 36
+} 
+
+const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
 let submitFunction = 0
 function switchingSubmitFunctions() {
     allSubmitFunctions[submitFunction]()
