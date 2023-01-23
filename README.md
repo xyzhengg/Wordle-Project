@@ -38,11 +38,15 @@
 
 # Game Plan
 1. DONE Function for coming up with the random word
-2. Make keyboard inputs and screen keyboard work and type into the boxes
-3. Make the wordle grid function the way I want
+2. DONE Make keyboard inputs and screen keyboard work and type into the boxes
+3. DONE Make the wordle grid function the way I want
     - click anywhere on the grid, and any typing will auto start in the first row
     - after first row has been SUBMITTED, any clicking will auto go onto the second row etc etc.
-4. Make a function to go through persons input and compare to the random word I generated. . . 
+4. DONE Make a function to go through persons input and compare to the random word I generated. . . 
     - style colors on wordle grid based on letter position
-    - after a correct letter, make the letter appear on the 6th ANSWER row
-    - 
+5. DONE Make a win function with streak counter
+6. Make a lose function than zeros streak counter
+    - two parameters: last box is not empty, and word inputted is NOT empty
+7. If lose or win, allow player to play again. If yes, generate new word
+8. Create reset button? (can maybe just refresh the page/reload window)
+9. 

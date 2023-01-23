@@ -96,6 +96,7 @@ function playAgain () {
         box[i].id = i+1
         box[i].innerText = ''
         box[i].parentElement.style.backgroundColor = ''
+        box[i].classList.add('fliptiles')
     }
     generateRandomWord()
     console.log(randomWord)
@@ -114,6 +115,20 @@ function resetGame() {
    streak.innerText = streakCounter
 } 
 
+// Instruction Accordion
+let accordion = document.querySelector(".accordion-instruction")
+accordion.addEventListener("click", function (event) {
+    console.log(event.target.className)
+    accordion.classList.toggle("active")
+
+        let instructions = document.querySelector(".instructions")
+        if (instructions.style.display === "block") {
+            instructions.style.display = "none"
+        } else
+            instructions.style.display = "block"
+    }
+)
+
 // Submit
 
 function submitFirstGuess () {
@@ -121,12 +136,12 @@ function submitFirstGuess () {
     for (let i=1; i<=5; i++) {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
-            character.parentElement.style.backgroundColor = "green";
+            character.parentElement.style.backgroundColor = "#51B051";
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
         } else {
-        character.parentElement.style.backgroundColor = "grey";
+        character.parentElement.style.backgroundColor = "#A4A4A4";
         }
         character.id = "submitted"
         
@@ -142,13 +157,13 @@ function submitSecondGuess () {
     for (let i=7; i<=11; i++) {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
-            character.parentElement.style.backgroundColor = "green";
+            character.parentElement.style.backgroundColor = "#51B051";
             
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
         } else {
-        character.parentElement.style.backgroundColor = "grey";
+        character.parentElement.style.backgroundColor = "#A4A4A4";
         }
         character.id = "submitted"
         randomWordIndex++
@@ -163,13 +178,13 @@ function submitThirdGuess () {
     for (let i=13; i<=17; i++) {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
-            character.parentElement.style.backgroundColor = "green";
+            character.parentElement.style.backgroundColor = "#51B051";
             
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
         } else {
-        character.parentElement.style.backgroundColor = "grey";
+        character.parentElement.style.backgroundColor = "#A4A4A4";
         }
         character.id = "submitted"
         randomWordIndex++
@@ -184,13 +199,13 @@ function submitFourthGuess () {
     for (let i=19; i<=23; i++) {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
-            character.parentElement.style.backgroundColor = "green";
+            character.parentElement.style.backgroundColor = "#51B051";
             
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
         } else {
-        character.parentElement.style.backgroundColor = "grey";
+        character.parentElement.style.backgroundColor = "#A4A4A4";
         }
         character.id = "submitted"
         randomWordIndex++
@@ -205,13 +220,13 @@ function submitFifthGuess () {
     for (let i=25; i<=29; i++) {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
-            character.parentElement.style.backgroundColor = "green";
+            character.parentElement.style.backgroundColor = "#51B051";
             
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
         } else {
-        character.parentElement.style.backgroundColor = "grey";
+        character.parentElement.style.backgroundColor = "#A4A4A4";
         }
         character.id = "submitted"
         randomWordIndex++
@@ -226,13 +241,13 @@ function submitSixthGuess () {
     for (let i=31; i<=35; i++) {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
-            character.parentElement.style.backgroundColor = "green";
+            character.parentElement.style.backgroundColor = "#51B051";
             
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
         } else {
-        character.parentElement.style.backgroundColor = "grey";
+        character.parentElement.style.backgroundColor = "#A4A4A4";
         }
         character.id = "submitted"
         randomWordIndex++
