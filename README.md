@@ -1,12 +1,12 @@
 # Wordle-Project
 [To play the game, click here](https://xyzhengg.github.io/Wordle-Project/)
+
 5 letter word
 - need to be able to check letter position if correct or not
     - if correct, append the letter to the whole column where it belongs and highlight green
     - if correct but wrong position, turn yellow
     - if wrong, turn grey
-- last row: make the boxes bolder so it's obvious that's the final output
-- only get 5 guesses!!!
+- only get 6 guesses!!!
 
 ## Functionality
 1. Search through the word array provided to make the checks
@@ -19,12 +19,13 @@
 7. After winning or losing, ot play again, there will be a "play again" button flashing
 
 ## Optional Functionality
-5. Could be fun if they win, make fireworks go off in the background (only if time allows)
-6. Add sound on button presses etc?
-7. Be able to do language adaptations and select what language to use
+1. Could be fun if they win, make fireworks go off in the background (only if time allows)
+2. Add sound on button presses etc?
+3. Be able to do language adaptations and select what language to use
     e.g. german, french, latin, italian, dutch
     e.g. american vs british spelling
-8. Could also make it allow more or less guesses!
+4. Could also make it allow more or less guesses!
+5. Maybe a point system?
 
 ## Keeping Track of Things
 1. If win, tell em they won, and can have another go
@@ -45,8 +46,10 @@
 4. DONE Make a function to go through persons input and compare to the random word I generated. . . 
     - style colors on wordle grid based on letter position
 5. DONE Make a win function with streak counter
-6. Make a lose function than zeros streak counter
+6. DONE Make a lose function than zeros streak counter
     - two parameters: last box is not empty, and word inputted is NOT empty
-7. If lose or win, allow player to play again. If yes, generate new word
-8. Create reset button? (can maybe just refresh the page/reload window)
-9. 
+7. DONE If lose or win, allow player to play again. If yes, generate new word
+8. DONE Create reset button? (can maybe just refresh the page/reload window)
+9. Maybe can introduce point system
+10. Make pop ups for winning and losing with play again button
+11. Make pop up for instructions
