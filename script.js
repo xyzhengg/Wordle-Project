@@ -44,22 +44,13 @@ function onScreenKeyboardFunctionGuess () {
 }
 onScreenKeyboardFunctionGuess()
 
-// Submit Button Function 
-let submit = document.getElementById('submit')
-submit.addEventListener('click', checkGuess)
-
-function checkGuess() {
-    if (!wordList.includes(guess.toLowerCase())){
-        alert("That's not a real word. Try again")
-    } else if (wordList.includes(guess.toLowerCase())) {
-        switchingSubmitFunctions()
-        guess=''
-     } 
-}
-
 let streakCounter = 0
-let streak = document.getElementById('streak')
+let streak = document.querySelector('.streak')
 streak.innerText = streakCounter
+
+let bestStreakCounter = 0
+let bestStreak = document.querySelector('.beststreak')
+bestStreak.innerText = bestStreakCounter
 
 // Win Function
 function win() {
@@ -68,7 +59,8 @@ function win() {
         document.querySelector('.win').innerText = "WINNER"
         streakCounter++
         streak.innerText = streakCounter
-        // letterCounter = 0
+        bestStreakCounter++
+        bestStreak.innerText = bestStreakCounter
     }  
 }
 
@@ -80,7 +72,8 @@ function lose() {
         document.querySelector('.lost').innerText = "YOU LOST"
         streakCounter = 0
         streak.innerText = streakCounter
-        // letterCounter = 0
+        bestStreakCounter = 0
+        bestStreak.innerText = bestStreakCounter
     } 
 }
 
@@ -113,6 +106,8 @@ function resetGame() {
    playAgain()
    streakCounter = 0
    streak.innerText = streakCounter
+   bestStreakCounter = 0
+   bestStreak.innerText = bestStreakCounter
 } 
 
 // Instruction Accordion
@@ -264,3 +259,16 @@ function switchingSubmitFunctions() {
     allSubmitFunctions[submitFunction]()
     submitFunction = submitFunction+1
     }
+
+    // Submit Button Function 
+let submit = document.getElementById('submit')
+submit.addEventListener('click', checkGuess)
+
+function checkGuess() {
+    if (!wordList.includes(guess.toLowerCase())){
+        alert("That's not a real word. Try again")
+    } else if (wordList.includes(guess.toLowerCase())) {
+        switchingSubmitFunctions()
+        guess=''
+     } 
+}
