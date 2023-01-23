@@ -72,8 +72,6 @@ function lose() {
         document.querySelector('.lost').innerText = "YOU LOST"
         streakCounter = 0
         streak.innerText = streakCounter
-        bestStreakCounter = 0
-        bestStreak.innerText = bestStreakCounter
     } 
 }
 
