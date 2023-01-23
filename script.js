@@ -107,8 +107,20 @@ function resetGame() {
    bestStreakCounter = 0
    bestStreak.innerText = bestStreakCounter
 } 
-// Submit
 
+// Instruction button
+let instructionButton = document.querySelector(".instruction-button")
+instructionButton.addEventListener("click", function () {
+    let instructions = document.querySelector(".instructions")
+    instructions.classList.toggle("showInstructions")
+    if (instructions.style.display === "block"){
+        instructions.style.display = "none"
+    } else {
+        instructions.style.display = "block"
+    }
+})
+
+// Submit
 function submitFirstGuess () {
     let randomWordIndex = 0
     for (let i=1; i<=5; i++) {

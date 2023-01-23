@@ -29,6 +29,23 @@ h1 {
 .wrong {
     color: #A4A4A4;
 }
+
+/* INSTRUCTIONS BUTTON */
+.instructions {
+    position: fixed;
+    top: -500px;
+    left: -500px;
+    padding: 60px;
+    padding-left: 90px;
+}
+.showInstructions {
+  position: relative;
+  margin: auto;
+  margin-left: 90px;
+  width: 400px;
+  height: 400px;
+}
+
 /* SIDE PANEL */
 .yourbeststreak,
 .currentstreak {
@@ -49,13 +66,22 @@ h1 {
 .beststreak {
     color: rgb(255, 128, 0);
 }
-
+.signature {
+    font-size: 12px;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+.github {
+    font-size: 12px;
+    margin-left: 52px;
+    margin-top: 0px;
+}
 .sidepanel {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     background-color: rgb(209, 234, 253);
     border-radius: 1rem;
-
 }
 .instructions {
     background-color: white;
@@ -73,6 +99,7 @@ h1 {
 /* NEW GAME BUTTON & INSTRUCTION BUTTON*/
 #reset,
 .instruction-button{
+    position: relative;
     margin-left: 30px;
     margin-top: 185px;
     width: 150px;
