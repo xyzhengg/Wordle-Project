@@ -15,8 +15,12 @@
     </head>
     <body>
         <h1> WORDLE </h1>
-        <section class="game-instructions">
-            <button class="accordion-instruction">Instructions</button>
+        <section class="sidepanel">
+            <h3 class="yourbeststreak">Best streak:</h3>
+            <p class="beststreak"> </p>
+            <h3 class="currentstreak">Current streak: </h3>
+            <p class=streak> </p>
+            <button class="instruction-button">Instructions</button>
             <div class="instructions">
                <p>Wordle is a 5 letter word guessing game.</p>
                 <p>You have 6 tries to guess the word.</p>
@@ -29,23 +33,19 @@
                     <li>If a letter in your guess is <span class='wrong'>WRONG</span> and not in the word at all, it will turn <span class="grey">grey</span></li>
                 </ul> 
             </div>
-            
-        </section>
-        <section class="sidepanel">
-            <h3 class="yourbeststreak">Best streak:</h3>
-            <p class="beststreak"> </p>
-            <h3 class="currentstreak">Current streak: </h3>
-            <p class=streak> </p>
-            <div>
-                <button id="playagain">Play Again</button>
-            </div>
             <div>
                 <button id="reset">New Game</button>
             </div>
+            
+        </section>
+
+        <section class="popup">
             <div class="displayresult">
                 <h1 class="result"></h1>
             </div>
-            
+            <div>
+                <button id="playagain">PLAY AGAIN</button>
+            </div>
         </section>
 
         <section class="wordle-grid">

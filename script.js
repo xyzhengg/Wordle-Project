@@ -107,21 +107,6 @@ function resetGame() {
    bestStreakCounter = 0
    bestStreak.innerText = bestStreakCounter
 } 
-
-// Instruction Accordion
-let accordion = document.querySelector(".accordion-instruction")
-accordion.addEventListener("click", function (event) {
-    console.log(event.target.className)
-    accordion.classList.toggle("active")
-
-        let instructions = document.querySelector(".instructions")
-        if (instructions.style.display === "block") {
-            instructions.style.display = "none"
-        } else
-            instructions.style.display = "block"
-    }
-)
-
 // Submit
 
 function submitFirstGuess () {
