@@ -9,6 +9,7 @@ console.log(randomWord)
 
 //Keyboard
 
+
 let guess = ''
 let letterCounter = 0
 
@@ -17,7 +18,9 @@ function onScreenKeyboardFunctionGuess () {
     for (let keyElement of keys) {
         let key = keyElement.textContent;
         keyElement.addEventListener('click', function() {
-            let output = document.getElementById(letterCounter+1);
+            let id = letterCounter+1
+            let output = document.getElementById(id);
+            console.log(id)
             switch (key) {
                 case 'Backspace':
                     let removeOutput = document.getElementById(letterCounter)
@@ -35,9 +38,11 @@ function onScreenKeyboardFunctionGuess () {
                     letterCounter ++
                 }
                 console.log(guess)
+                
         }) 
     }
 }
+onScreenKeyboardFunctionGuess()
 
 // Submit Button Function 
 let submit = document.getElementById('submit')
@@ -62,8 +67,9 @@ function win() {
         document.querySelector('.result').classList.add("win")
         document.querySelector('.win').innerText = "WINNER"
         streakCounter++
-    } streak.innerText = streakCounter
-      document.querySelector('.result').classList.remove("win")
+        streak.innerText = streakCounter
+        // letterCounter = 0
+    }  
 }
 
 // Lose Function
@@ -73,9 +79,40 @@ function lose() {
         document.querySelector('.result').classList.add("lost")
         document.querySelector('.lost').innerText = "YOU LOST"
         streakCounter = 0
-    } streak.innerText = streakCounter
-      document.querySelector('.result').classList.remove("lost")
+        streak.innerText = streakCounter
+        // letterCounter = 0
+    } 
 }
+
+
+// Play again button
+const playAgainButton = document.getElementById("playagain")
+playAgainButton.addEventListener('click', playAgain)
+
+function playAgain () {
+    guess = ''
+    let box = document.querySelectorAll("#submitted")
+    for (let i=0; i<box.length; i++) {
+        box[i].id = i+1
+        box[i].innerText = ''
+        box[i].parentElement.style.backgroundColor = ''
+    }
+    generateRandomWord()
+    console.log(randomWord)
+    document.querySelector('.result').classList.remove('win')
+    document.querySelector('.result').classList.remove('lost')
+    document.querySelector('.result').innerText = ''
+    letterCounter = 0
+    submitFunction = 0
+} 
+
+const resetButton = document.getElementById("reset")
+resetButton.addEventListener('click', resetGame)
+function resetGame() {
+   playAgain()
+   streakCounter = 0
+   streak.innerText = streakCounter
+} 
 
 // Submit
 
@@ -92,9 +129,11 @@ function submitFirstGuess () {
         character.parentElement.style.backgroundColor = "grey";
         }
         character.id = "submitted"
+        
         randomWordIndex++
     }
     letterCounter = 6
+    document.getElementById("6").id = "submitted"
     win()
 }
     
@@ -115,6 +154,7 @@ function submitSecondGuess () {
         randomWordIndex++
     }
     letterCounter = 12
+    document.getElementById("12").id = "submitted"
     win()
 } 
 
@@ -135,6 +175,7 @@ function submitThirdGuess () {
         randomWordIndex++
     }
     letterCounter = 18
+    document.getElementById("18").id = "submitted"
     win()
 } 
 
@@ -155,6 +196,7 @@ function submitFourthGuess () {
         randomWordIndex++
     }
     letterCounter = 24
+    document.getElementById("24").id = "submitted"
     win()
 } 
 
@@ -175,6 +217,7 @@ function submitFifthGuess () {
         randomWordIndex++
     }
     letterCounter = 30
+    document.getElementById("30").id = "submitted"
     win()
 } 
 
@@ -195,40 +238,14 @@ function submitSixthGuess () {
         randomWordIndex++
     }
     letterCounter = 36
+    document.getElementById("36").id = "submitted"
     win()
     lose()
     }
     
-
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
 let submitFunction = 0
 function switchingSubmitFunctions() {
     allSubmitFunctions[submitFunction]()
     submitFunction = submitFunction+1
     }
-
-// Play again button
-const playAgainButton = document.getElementById("playagain")
-playAgainButton.addEventListener('click', playAgain)
-
-function playAgain () {
-    guess = ''
-    letterCounter = 0
-    let box = document.querySelectorAll(".output")
-    for (let i=0; i<box.length; i++) {
-        box[i].innerText = ''
-        console.log(box[i].innerText)
-        box[i].parentElement.style.backgroundColor = ''
-    }
-    generateRandomWord()
-    console.log(randomWord)
-    onScreenKeyboardFunctionGuess()
-} 
-
-const resetButton = document.getElementById("reset")
-resetButton.addEventListener('click', resetGame)
-function resetGame() {
-   playAgain()
-   streakCounter = 0
-   streak.innerText = streakCounter
-} 
