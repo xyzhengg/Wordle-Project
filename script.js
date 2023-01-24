@@ -108,16 +108,25 @@ function resetGame() {
    bestStreak.innerText = bestStreakCounter
 } 
 
-// Instruction button
-let instructionButton = document.querySelector(".instruction-button")
-instructionButton.addEventListener("click", function () {
-    let instructions = document.querySelector(".instructions")
-    instructions.classList.toggle("showInstructions")
-    if (instructions.style.display === "block"){
-        instructions.style.display = "none"
-    } else {
-        instructions.style.display = "block"
-    }
+// Instruction Functions
+const instructionButton = document.querySelector(".instruction-button")
+const instructions = document.querySelector(".instructions")
+const theInstructions = document.querySelector(".the-instructions")
+
+instructionButton.addEventListener('click', function() {
+    instructions.style.display = "block";
+    theInstructions.style.display = "block";
+})
+
+const closeInstructions = document.querySelector(".close-instructions")
+closeInstructions.addEventListener('click', function() {
+    instructions.style.display = "none";
+    theInstructions.style.display = "none";
+})
+
+theInstructions.addEventListener('click', function() {
+    instructions.style.display = "none";
+    theInstructions.style.display = "none";
 })
 
 // Submit
