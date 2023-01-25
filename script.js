@@ -175,9 +175,24 @@ const instructionButton = document.querySelector(".instruction-button")
 const instructions = document.querySelector(".instructions")
 const theInstructions = document.querySelector(".the-instructions")
 
+
+// Scroll code referenced from  https://gist.github.com/sabapathygithub/e6ca2c0fd06c21c5fb608b9a172ca3c4
+
 instructionButton.addEventListener('click', function() {
     instructions.style.display = "block";
     theInstructions.style.display = "block";
+    function scrollToBottom(timedelay=0) {
+        let scrollId;
+        let height = 0;
+        let minScrollHeight = 100;
+        scrollId = setInterval(function () {
+            if (height <= document.body.scrollHeight) {
+                window.scrollBy(0, minScrollHeight);
+            }
+            height += minScrollHeight;
+        }, 0);           
+    } 
+    scrollToBottom()
 })
 
 const closeInstructions = document.querySelector(".close-instructions")

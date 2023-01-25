@@ -43,24 +43,26 @@ h1 {
     display: none;
     background-color: white;
     margin: auto;
+    padding-top: 40px;
     padding: 50px;
     border: none;
     width: 70%;
     height: 70%;
     border-radius: 2rem;
+    margin-bottom: 40px;
 }
 
 /* INSTRUCTIONS TEXT STYLING */
 .right {
-    color: #51B051;
+    color: #3f893f;
     font-weight: 600;
 }
 .not {
-    color: orange;
+    color: rgb(222, 145, 1);
     font-weight: 600;
 }
 .wrong {
-    color: #A4A4A4;
+    color: #696868;
     font-weight: 600;
 }
 
