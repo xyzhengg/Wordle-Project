@@ -80,13 +80,22 @@ function lose() {
     } 
 }
 
-// Play again button
+// Play again buttons
 const playAgainButton = document.getElementById("playagain")
 playAgainButton.addEventListener('click', playAgain)
 
 const displayResult = document.querySelector(".display-result")
 const closeResult = document.querySelector(".close-result")
 const theResults = document.querySelector(".the-results")
+
+const onScreenPlayAgain = document.querySelector(".play-again-onscreen")
+onScreenPlayAgain.addEventListener('click', playAgain)
+onScreenPlayAgain.addEventListener('click', playAgainButtonHide)
+
+function playAgainButtonHide () {
+    onScreenPlayAgain.style.display = "none";
+    instructionButton.style.marginTop = "170px"
+}
 
 function playAgain () {
     guess = ''
@@ -121,9 +130,11 @@ function resetGame() {
 
 // Results Functions 
 closeResult.addEventListener('click', function () {
-    displayResult.style.display = "none"
-    theResults.style.display = "none"
-    playAgainButton.style.display = "none"
+    displayResult.style.display = "none";
+    theResults.style.display = "none";
+    playAgainButton.style.display = "none";
+    onScreenPlayAgain.style.display = "block";
+    document.querySelector(".instruction-button").style.marginTop = "10px";
 })
 
 // Instruction Functions

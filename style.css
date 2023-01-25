@@ -155,7 +155,6 @@ h1 {
 }
 
 /* NEW GAME BUTTON & INSTRUCTION BUTTON POSITIONING*/
-
 #reset,
 .play-again-onscreen,
 .instruction-button,
@@ -171,8 +170,12 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
 }
+.instruction-button {
+    margin-top: 170px;
+}
 .play-again-onscreen {
-    margin-top: 120px;
+    display: none;
+    margin-top: 135px;
 }
 #reset {
     margin-top: 10px;
