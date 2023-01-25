@@ -152,8 +152,6 @@ function playAgain () {
     submitFunction = 0
 } 
 
-
-
 const resetButton = document.getElementById("reset")
 resetButton.addEventListener('click', resetGame)
 function resetGame() {
@@ -165,6 +163,14 @@ function resetGame() {
 
 // Results Functions 
 closeResult.addEventListener('click', function () {
+    displayResult.style.display = "none";
+    theResults.style.display = "none";
+    playAgainButton.style.display = "none";
+    onScreenPlayAgain.style.display = "block";
+    document.querySelector(".instruction-button").style.marginTop = "10px";
+})
+
+theResults.addEventListener('click', function () {
     displayResult.style.display = "none";
     theResults.style.display = "none";
     playAgainButton.style.display = "none";
