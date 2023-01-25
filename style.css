@@ -195,7 +195,13 @@ h1 {
 /* WINNER AND LOSER DISPLAY */
 .win {
     font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 0, 0, 0, 0;
+}
 
+.lost {
+    font-size: 50px;
     align-items: center;
     justify-content: center;
     margin: 0, 0, 0, 0;

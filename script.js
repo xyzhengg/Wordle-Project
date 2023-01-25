@@ -62,22 +62,27 @@ function win() {
 
         document.getElementById("playagain").style.display = "block";
 
-        streakCounter++
-        streak.innerText = streakCounter
-        bestStreakCounter++
-        bestStreak.innerText = bestStreakCounter
+        // streakCounter++
+        // streak.innerText = streakCounter
+        // bestStreakCounter++
+        // bestStreak.innerText = bestStreakCounter
     }  
 }
 
 // Lose Function
 const lastBoxLetter = document.getElementById("35")
 function lose() {
-    if ((guess.toLowerCase() !== randomWord) && (lastBoxLetter.innerText !== '')){
+    if ((guess.toLowerCase() !== randomWord) && (letterCounter === 36)){
         document.querySelector('.result').classList.add("lost")
         document.querySelector('.lost').innerText = "YOU LOST"
+        console.log("lost")
+    }
+    if (streakCounter > bestStreakCounter) {
+        bestStreakCounter = streakCounter
+        bestStreak.innerText = bestStreakCounter
+    }
         streakCounter = 0
         streak.innerText = streakCounter
-    } 
 }
 
 // Play again buttons
@@ -124,8 +129,8 @@ function resetGame() {
    playAgain()
    streakCounter = 0
    streak.innerText = streakCounter
-   bestStreakCounter = 0
-   bestStreak.innerText = bestStreakCounter
+//    bestStreakCounter = 0
+//    bestStreak.innerText = bestStreakCounter
 } 
 
 // Results Functions 
@@ -158,6 +163,30 @@ theInstructions.addEventListener('click', function() {
     theInstructions.style.display = "none";
 })
 
+function pointsCounter () {
+    if (guess.toLowerCase() === randomWord){
+        if (letterCounter === 6) {
+            streakCounter = streakCounter + 1200
+            streak.innerText = streakCounter
+        } else if (letterCounter === 12) {
+            streakCounter = streakCounter + 900
+            streak.innerText = streakCounter
+        } else if (letterCounter === 18) {
+                streakCounter = streakCounter + 550
+                streak.innerText = streakCounter
+        } else if (letterCounter === 24) {
+                streakCounter = streakCounter + 300
+                streak.innerText = streakCounter
+        } else if (letterCounter === 30) {
+            streakCounter = streakCounter + 100
+            streak.innerText = streakCounter
+        } else if (letterCounter === 36) {
+            streakCounter = streakCounter + 50
+            streak.innerText = streakCounter
+        }
+    }
+}
+
 // Submit
 function submitFirstGuess () {
     let randomWordIndex = 0
@@ -178,6 +207,7 @@ function submitFirstGuess () {
     letterCounter = 6
     document.getElementById("6").id = "submitted"
     win()
+    pointsCounter()
 }
     
 function submitSecondGuess () {
@@ -199,6 +229,7 @@ function submitSecondGuess () {
     letterCounter = 12
     document.getElementById("12").id = "submitted"
     win()
+    pointsCounter()
 } 
 
 function submitThirdGuess () {
@@ -220,6 +251,7 @@ function submitThirdGuess () {
     letterCounter = 18
     document.getElementById("18").id = "submitted"
     win()
+    pointsCounter()
 } 
 
 function submitFourthGuess () {
@@ -241,6 +273,7 @@ function submitFourthGuess () {
     letterCounter = 24
     document.getElementById("24").id = "submitted"
     win()
+    pointsCounter()
 } 
 
 function submitFifthGuess () {
@@ -262,6 +295,7 @@ function submitFifthGuess () {
     letterCounter = 30
     document.getElementById("30").id = "submitted"
     win()
+    pointsCounter()
 } 
 
 function submitSixthGuess () {
@@ -283,6 +317,7 @@ function submitSixthGuess () {
     letterCounter = 36
     document.getElementById("36").id = "submitted"
     win()
+    pointsCounter()
     lose()
     }
     
