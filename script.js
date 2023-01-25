@@ -20,7 +20,7 @@ function onScreenKeyboardFunctionGuess () {
         keyElement.addEventListener('click', function() {
             let id = letterCounter+1
             let output = document.getElementById(id);
-            console.log(id)
+            // console.log(id)
             switch (key) {
                 case 'Backspace':
                     let removeOutput = document.getElementById(letterCounter)
@@ -56,7 +56,12 @@ bestStreak.innerText = bestStreakCounter
 function win() {
     if (guess.toLowerCase() === randomWord){
         document.querySelector('.result').classList.add("win")
-        document.querySelector('.win').innerText = "WINNER"
+        document.querySelector('.win').innerText = "WINNER";
+        document.querySelector('.the-results').style.display = "block";
+        document.querySelector('.display-result').style.display = "block";
+
+        document.getElementById("playagain").style.display = "block";
+
         streakCounter++
         streak.innerText = streakCounter
         bestStreakCounter++
@@ -75,10 +80,13 @@ function lose() {
     } 
 }
 
-
 // Play again button
 const playAgainButton = document.getElementById("playagain")
 playAgainButton.addEventListener('click', playAgain)
+
+const displayResult = document.querySelector(".display-result")
+const closeResult = document.querySelector(".close-result")
+const theResults = document.querySelector(".the-results")
 
 function playAgain () {
     guess = ''
@@ -94,6 +102,9 @@ function playAgain () {
     document.querySelector('.result').classList.remove('win')
     document.querySelector('.result').classList.remove('lost')
     document.querySelector('.result').innerText = ''
+    document.getElementById('playagain').style.display = "none";
+    displayResult.style.display = "none";
+    theResults.style.display = "none";
     letterCounter = 0
     submitFunction = 0
 } 
@@ -107,6 +118,13 @@ function resetGame() {
    bestStreakCounter = 0
    bestStreak.innerText = bestStreakCounter
 } 
+
+// Results Functions 
+closeResult.addEventListener('click', function () {
+    displayResult.style.display = "none"
+    theResults.style.display = "none"
+    playAgainButton.style.display = "none"
+})
 
 // Instruction Functions
 const instructionButton = document.querySelector(".instruction-button")
