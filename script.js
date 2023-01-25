@@ -181,7 +181,7 @@ const theInstructions = document.querySelector(".the-instructions")
 instructionButton.addEventListener('click', function() {
     instructions.style.display = "block";
     theInstructions.style.display = "block";
-    function scrollToBottom(timedelay=0) {
+    function scrollToBottom() {
         let scrollId;
         let height = 0;
         let minScrollHeight = 100;
