@@ -59,23 +59,24 @@ function win() {
         document.querySelector('.win').innerText = "WINNER";
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
-
         document.getElementById("playagain").style.display = "block";
     }  
 }
 
 // Lose Function
-const lastBoxLetter = document.getElementById("35")
 function lose() {
     if ((guess.toLowerCase() !== randomWord) && (letterCounter === 36)){
         document.querySelector('.result').classList.add("lost")
         document.querySelector('.lost').innerText = "YOU LOST"
-        console.log("lost")
+        console.log("lost");
+        document.querySelector('.the-results').style.display = "block";
+        document.querySelector('.display-result').style.display = "block";
+        document.getElementById("playagain").style.display = "block";
     }
     if (scoreCounter > highScoreCounter) {
         highScoreCounter = scoreCounter
         highScore.innerText = highScoreCounter
-    }
+    }   
         scoreCounter = 0
         score.innerText = scoreCounter
 }
