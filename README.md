@@ -59,8 +59,8 @@
 14. DONE Reposition xin yu in modal and style associated functions
 14. DONE Add +score to play again modal
 14. DONE Pulse on-screen play again button and make it orange
+15. DONE Update instructions modal with pictures and instructions on points system
 14. Delay for winner and loser and xin yu functions
-15. Update instructions modal with pictures and instructions on points system
 16. Change alert word not real to a modal
 17. Add modal for when guessing the same word already guessed - maybe this can be part of the settings?
 13. Timer? In settings to make harder - get extra points!!!
