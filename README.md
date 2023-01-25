@@ -57,6 +57,9 @@
     - only allowed once per game
 13. Reposition winner, loser, etc in modular
 14. Reposition xin yu in modular and style associated functions
+14. Add +score to play again modular
+14. Pulse on-screen play again button and make it orange
+14. Delay for winner and loser and xin yu functions
 15. Update instructions modular with pictures and instructions on points system
 16. Change alert word not real to a modular
 17. Add modular for when guessing the same word already guessed - maybe this can be part of the settings?

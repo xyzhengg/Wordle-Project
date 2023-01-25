@@ -78,49 +78,6 @@ h1 {
   cursor: default;
 }
 
-/* RESULTS DISPLAY FUNCTION */
-.the-results {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(3, 5, 6, 0.5)
-}
-
-.display-result{
-    display: none;
-    background-color: white;
-    margin: auto;
-    margin-top: 200px;
-    padding: 50px;
-    border: none;
-    width: 50%;
-    height: 40%;
-    border-radius: 2rem;
-}
-
-#playagain {
-    display: none;
-
-}
-
-/* RESULTS CLOSE BUTTON */
-.close-result {
-    color:rgb(9, 61, 108);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close-result:hover,
-.close-result:focus {
-  color: black;
-  text-decoration: none;
-  cursor: default;
-}
-
 /* SIDE PANEL */
 .yourhighestscore,
 .yourcurrentscore {
@@ -176,35 +133,104 @@ h1 {
 .play-again-onscreen {
     display: none;
     margin-top: 135px;
+    border-color: rgb(250, 207, 154);
+    background-color: rgb(255, 128, 0);
 }
 #reset {
     margin-top: 10px;
 }
 
+/* RESULTS CLOSE BUTTON */
+.close-result {
+    color:rgb(9, 61, 108);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-result:hover,
+.close-result:focus {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+/* RESULTS DISPLAY FUNCTION */
+.the-results {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(3, 5, 6, 0.5)
+}
+
+.display-result{
+    display: none;
+    background-color: white;
+    margin: auto;
+    margin-top: 200px;
+    padding: 40px;
+    border: none;
+    width: 50%;
+    height: 32%;
+    border-radius: 2rem;
+}
+
 /* PLAY AGAIN BUTTON POPUP*/
 #playagain {
-    width: 250px;
-    height: 70px;
-    border-radius: 3rem;
-    border-width: 2px;
+    display: none;
+    width: 150px;
+    height: 35px;
+    border-radius: 7px;
+    border-width: 1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-color: rgb(250, 207, 154);
     background-color: rgb(255, 128, 0);
-    font-size: 25px;
+    font-size: 15px;
+    margin: auto;
+    margin-top: 30px;
 }
 
 /* WINNER AND LOSER DISPLAY */
 .win {
-    font-size: 50px;
-    align-items: center;
-    justify-content: center;
-    margin: 0, 0, 0, 0;
+    font-size: 70px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: rgb(255, 128, 0);
+    font-weight: 600;
 }
 
 .lost {
+    font-size: 60px;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: rgb(9, 61, 108);
+    font-weight: 600;
+}
+.plus-points {
+    font-size: 25px;
+    margin-top: 15px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-style: italic;
+}
+.new-high-score {
+
+}
+.current-score {
     font-size: 50px;
-    align-items: center;
-    justify-content: center;
-    margin: 0, 0, 0, 0;
+    margin-top: 10px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
 }
 
 /* DISPLAY WORDLE GRID */

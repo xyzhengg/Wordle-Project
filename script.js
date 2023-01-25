@@ -68,7 +68,7 @@ function winXinYu() {
         console.log(guess)
         document.querySelector('.result').classList.add("winXinYu")
         document.querySelector('.winXinYu').innerText = "WINNER! You found the special word!";
-        document.querySelector('.new-high-score').innerText = "+10,000 pts"
+        document.querySelector('.plus-points').innerText = "+10,000 pts"
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
@@ -85,11 +85,13 @@ function lose() {
         if (scoreCounter > highScoreCounter) {
             highScoreCounter = scoreCounter
             highScore.innerText = highScoreCounter
-            document.querySelector('.lost').innerText = "Wow! New High Score!"
-            document.querySelector('.new-high-score').innerText = `${highScoreCounter}`
+            document.querySelector('.lost').innerText = "Game Over"
+            document.querySelector('.plus-points').classList.add("new-high-score")
+            document.querySelector('.new-high-score').innerText = "Wow! New High Score!"
+            currentScoreDisplay.innerText = `${highScoreCounter}pts`
         } else {
-            document.querySelector('.lost').innerText = "You Lost"
-            document.querySelector('.new-high-score').innerText = ``
+            document.querySelector('.lost').innerText = "Game Over"
+            currentScoreDisplay.innerText = `${scoreCounter}`
         }
         console.log("lost")
         document.querySelector('.the-results').style.display = "block";
@@ -131,11 +133,13 @@ function playAgain () {
     document.querySelector('.result').classList.remove('win')
     document.querySelector('.result').classList.remove('lost')
     document.querySelector('.result').classList.remove("winXinYu")
-    document.querySelector('.new-high-score').innerText = ''
+    document.querySelector('.plus-points').innerText = ''
     document.querySelector('.result').innerText = ''
+    document.querySelector(".current-score").innerText = ''
     document.getElementById('playagain').style.display = "none";
     displayResult.style.display = "none";
     theResults.style.display = "none";
+
     letterCounter = 0
     submitFunction = 0
 } 
@@ -179,26 +183,40 @@ theInstructions.addEventListener('click', function() {
     theInstructions.style.display = "none";
 })
 
+const scoreDisplay = document.querySelector(".plus-points")
+const currentScoreDisplay = document.querySelector(".current-score")
 function pointsCounter () {
     if (guess.toLowerCase() === randomWord){
         if (letterCounter === 6) {
             scoreCounter = scoreCounter + 1200
             score.innerText = scoreCounter
+            scoreDisplay.innerText = "+1200"
+            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 12) {
             scoreCounter = scoreCounter + 900
             score.innerText = scoreCounter
+            scoreDisplay.innerText = "+900"
+            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 18) {
-                scoreCounter = scoreCounter + 550
-                score.innerText = scoreCounter
+            scoreCounter = scoreCounter + 550
+            score.innerText = scoreCounter
+            scoreDisplay.innerText = "+550"
+            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 24) {
-                scoreCounter = scoreCounter + 300
-                score.innerText = scoreCounter
+            scoreCounter = scoreCounter + 300
+            score.innerText = scoreCounter
+            scoreDisplay.innerText = "+300"
+            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 30) {
             scoreCounter = scoreCounter + 100
             score.innerText = scoreCounter
+            scoreDisplay.innerText = "+100"
+            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 36) {
             scoreCounter = scoreCounter + 50
             score.innerText = scoreCounter
+            scoreDisplay.innerText = "+50"
+            currentScoreDisplay.innerText = `${scoreCounter} pts`
         }
     }
 }
