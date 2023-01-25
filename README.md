@@ -21,11 +21,11 @@
 ## Optional Functionality
 1. Could be fun if they win, make fireworks go off in the background (only if time allows)
 2. Add sound on button presses etc?
-3. Be able to do language adaptations and select what language to use
+3. NAH Be able to do language adaptations and select what language to use
     e.g. german, french, latin, italian, dutch
     e.g. american vs british spelling
 4. Could also make it allow more or less guesses!
-5. Maybe a point system?
+5. DONE Maybe a point system?
 
 ## Keeping Track of Things
 1. If win, tell em they won, and can have another go
@@ -37,7 +37,7 @@
 
 3. Can maybe keep track of how many guesses it takes to win each time?
 
-# Game Plan
+# Game Plan/ Progress
 1. DONE Function for coming up with the random word
 2. DONE Make keyboard inputs and screen keyboard work and type into the boxes
 3. DONE Make the wordle grid function the way I want
@@ -50,6 +50,18 @@
     - two parameters: last box is not empty, and word inputted is NOT empty
 7. DONE If lose or win, allow player to play again. If yes, generate new word
 8. DONE Create reset button? (can maybe just refresh the page/reload window)
-9. Maybe can introduce point system
-10. Make pop ups for winning and losing with play again button
-11. Make pop up for instructions
+9. DONE Maybe can introduce point system
+10. DONE Make modular for winning and losing with play again button
+11. DONE Make modular for instructions
+12. DONE Add special word xinyu for extra points
+    - only allowed once per game
+13. Reposition winner, loser, etc in modular
+14. Reposition xin yu in modular and style associated functions
+15. Update instructions modular with pictures and instructions on points system
+16. Change alert word not real to a modular
+17. Add modular for when guessing the same word already guessed - maybe this can be part of the settings?
+13. Timer? In settings to make harder - get extra points!!!
+14. Flip tiles animation
+15. Sound?
+16. Keyboard function?
+17. 
