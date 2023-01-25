@@ -51,18 +51,18 @@
 7. DONE If lose or win, allow player to play again. If yes, generate new word
 8. DONE Create reset button? (can maybe just refresh the page/reload window)
 9. DONE Maybe can introduce point system
-10. DONE Make modular for winning and losing with play again button
-11. DONE Make modular for instructions
+10. DONE Make modal for winning and losing with play again button
+11. DONE Make modal for instructions
 12. DONE Add special word xinyu for extra points
     - only allowed once per game
-13. Reposition winner, loser, etc in modular
-14. Reposition xin yu in modular and style associated functions
-14. Add +score to play again modular
+13. DONE Reposition winner, loser, etc in modal
+14. DONE Reposition xin yu in modal and style associated functions
+14. DONE Add +score to play again modal
 14. Pulse on-screen play again button and make it orange
 14. Delay for winner and loser and xin yu functions
-15. Update instructions modular with pictures and instructions on points system
-16. Change alert word not real to a modular
-17. Add modular for when guessing the same word already guessed - maybe this can be part of the settings?
+15. Update instructions modal with pictures and instructions on points system
+16. Change alert word not real to a modal
+17. Add modal for when guessing the same word already guessed - maybe this can be part of the settings?
 13. Timer? In settings to make harder - get extra points!!!
 14. Flip tiles animation
 15. Sound?
