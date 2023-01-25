@@ -58,7 +58,7 @@
 13. DONE Reposition winner, loser, etc in modal
 14. DONE Reposition xin yu in modal and style associated functions
 14. DONE Add +score to play again modal
-14. Pulse on-screen play again button and make it orange
+14. DONE Pulse on-screen play again button and make it orange
 14. Delay for winner and loser and xin yu functions
 15. Update instructions modal with pictures and instructions on points system
 16. Change alert word not real to a modal
