@@ -44,13 +44,13 @@ function onScreenKeyboardFunctionGuess () {
 }
 onScreenKeyboardFunctionGuess()
 
-let streakCounter = 0
-let streak = document.querySelector('.streak')
-streak.innerText = streakCounter
+let scoreCounter = 0
+let score = document.querySelector('.score')
+score.innerText = scoreCounter
 
-let bestStreakCounter = 0
-let bestStreak = document.querySelector('.beststreak')
-bestStreak.innerText = bestStreakCounter
+let highScoreCounter = 0
+let highScore = document.querySelector('.highScore')
+highScore.innerText = highScoreCounter
 
 // Win Function
 function win() {
@@ -61,11 +61,6 @@ function win() {
         document.querySelector('.display-result').style.display = "block";
 
         document.getElementById("playagain").style.display = "block";
-
-        // streakCounter++
-        // streak.innerText = streakCounter
-        // bestStreakCounter++
-        // bestStreak.innerText = bestStreakCounter
     }  
 }
 
@@ -77,12 +72,12 @@ function lose() {
         document.querySelector('.lost').innerText = "YOU LOST"
         console.log("lost")
     }
-    if (streakCounter > bestStreakCounter) {
-        bestStreakCounter = streakCounter
-        bestStreak.innerText = bestStreakCounter
+    if (scoreCounter > highScoreCounter) {
+        highScoreCounter = scoreCounter
+        highScore.innerText = highScoreCounter
     }
-        streakCounter = 0
-        streak.innerText = streakCounter
+        scoreCounter = 0
+        score.innerText = scoreCounter
 }
 
 // Play again buttons
@@ -127,10 +122,8 @@ const resetButton = document.getElementById("reset")
 resetButton.addEventListener('click', resetGame)
 function resetGame() {
    playAgain()
-   streakCounter = 0
-   streak.innerText = streakCounter
-//    bestStreakCounter = 0
-//    bestStreak.innerText = bestStreakCounter
+   scoreCounter = 0
+   score.innerText = scoreCounter
 } 
 
 // Results Functions 
@@ -166,23 +159,23 @@ theInstructions.addEventListener('click', function() {
 function pointsCounter () {
     if (guess.toLowerCase() === randomWord){
         if (letterCounter === 6) {
-            streakCounter = streakCounter + 1200
-            streak.innerText = streakCounter
+            scoreCounter = scoreCounter + 1200
+            score.innerText = scoreCounter
         } else if (letterCounter === 12) {
-            streakCounter = streakCounter + 900
-            streak.innerText = streakCounter
+            scoreCounter = scoreCounter + 900
+            score.innerText = scoreCounter
         } else if (letterCounter === 18) {
-                streakCounter = streakCounter + 550
-                streak.innerText = streakCounter
+                scoreCounter = scoreCounter + 550
+                score.innerText = scoreCounter
         } else if (letterCounter === 24) {
-                streakCounter = streakCounter + 300
-                streak.innerText = streakCounter
+                scoreCounter = scoreCounter + 300
+                score.innerText = scoreCounter
         } else if (letterCounter === 30) {
-            streakCounter = streakCounter + 100
-            streak.innerText = streakCounter
+            scoreCounter = scoreCounter + 100
+            score.innerText = scoreCounter
         } else if (letterCounter === 36) {
-            streakCounter = streakCounter + 50
-            streak.innerText = streakCounter
+            scoreCounter = scoreCounter + 50
+            score.innerText = scoreCounter
         }
     }
 }
