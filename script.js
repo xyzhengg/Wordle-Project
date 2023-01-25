@@ -67,18 +67,22 @@ function win() {
 function lose() {
     if ((guess.toLowerCase() !== randomWord) && (letterCounter === 36)){
         document.querySelector('.result').classList.add("lost")
-        document.querySelector('.lost').innerText = "YOU LOST"
-        console.log("lost");
+        if (scoreCounter > highScoreCounter) {
+            highScoreCounter = scoreCounter
+            highScore.innerText = highScoreCounter
+            document.querySelector('.lost').innerText = "Wow! New High Score!"
+            document.querySelector('.new-high-score').innerText = `${highScoreCounter}`
+        } else {
+            document.querySelector('.lost').innerText = "You Lost"
+            document.querySelector('.new-high-score').innerText = ``
+        }
+        console.log("lost")
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
-    }
-    if (scoreCounter > highScoreCounter) {
-        highScoreCounter = scoreCounter
-        highScore.innerText = highScoreCounter
-    }   
-        scoreCounter = 0
-        score.innerText = scoreCounter
+    } 
+    scoreCounter = 0
+    score.innerText = scoreCounter
 }
 
 // Play again buttons
