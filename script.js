@@ -66,17 +66,24 @@ function win() {
 function winXinYu() {
     if (guess.toLowerCase() === "xinyu"){
         console.log(guess)
-        document.querySelector('.result').classList.add("winXinYu")
-        document.querySelector('.winXinYu').innerText = "WINNER! You found the special word!";
-        document.querySelector('.plus-points').innerText = "+10,000 pts"
+        document.querySelector('.result').classList.add("win")
+        document.querySelector('.win').innerText = "WINNER"
+        
+        document.querySelector('.win-xinyu-text').innerText = "You found the special word!"
+
+        document.querySelector('.plus-points').innerText = "+10,000"
+        scoreCounter = scoreCounter + 10000
+        score.innerText = scoreCounter
+
+        currentScoreDisplay.innerText = `${scoreCounter}pts`
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
         wordList.pop("xinyu")
-        scoreCounter = scoreCounter + 10000
-        score.innerText = scoreCounter
     }  
 }
+
+            
 
 // Lose Function
 function lose() {
@@ -136,6 +143,7 @@ function playAgain () {
     document.querySelector('.plus-points').innerText = ''
     document.querySelector('.result').innerText = ''
     document.querySelector(".current-score").innerText = ''
+    document.querySelector('.win-xinyu-text').innerText = ''
     document.getElementById('playagain').style.display = "none";
     displayResult.style.display = "none";
     theResults.style.display = "none";
