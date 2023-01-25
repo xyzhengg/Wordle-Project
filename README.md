@@ -64,4 +64,4 @@
 14. Flip tiles animation
 15. Sound?
 16. Keyboard function?
-17. 
+17. Make it fit to different screen sizes?

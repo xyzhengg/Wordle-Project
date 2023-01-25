@@ -65,6 +65,7 @@ function win() {
 
 function winXinYu() {
     if (guess.toLowerCase() === "xinyu"){
+        console.log(guess)
         document.querySelector('.result').classList.add("winXinYu")
         document.querySelector('.winXinYu').innerText = "WINNER! You found the special word!";
         document.querySelector('.new-high-score').innerText = "+10,000 pts"
@@ -129,6 +130,8 @@ function playAgain () {
     console.log(randomWord)
     document.querySelector('.result').classList.remove('win')
     document.querySelector('.result').classList.remove('lost')
+    document.querySelector('.result').classList.remove("winXinYu")
+    document.querySelector('.new-high-score').innerText = ''
     document.querySelector('.result').innerText = ''
     document.getElementById('playagain').style.display = "none";
     displayResult.style.display = "none";
@@ -220,6 +223,7 @@ function submitFirstGuess () {
     letterCounter = 6
     document.getElementById("6").id = "submitted"
     win()
+    winXinYu()
     pointsCounter()
 }
     
@@ -242,6 +246,7 @@ function submitSecondGuess () {
     letterCounter = 12
     document.getElementById("12").id = "submitted"
     win()
+    winXinYu()
     pointsCounter()
 } 
 
@@ -264,6 +269,7 @@ function submitThirdGuess () {
     letterCounter = 18
     document.getElementById("18").id = "submitted"
     win()
+    winXinYu()
     pointsCounter()
 } 
 
@@ -286,6 +292,7 @@ function submitFourthGuess () {
     letterCounter = 24
     document.getElementById("24").id = "submitted"
     win()
+    winXinYu()
     pointsCounter()
 } 
 
@@ -308,6 +315,7 @@ function submitFifthGuess () {
     letterCounter = 30
     document.getElementById("30").id = "submitted"
     win()
+    winXinYu()
     pointsCounter()
 } 
 
@@ -330,6 +338,7 @@ function submitSixthGuess () {
     letterCounter = 36
     document.getElementById("36").id = "submitted"
     win()
+    winXinYu()
     pointsCounter()
     lose()
     }
