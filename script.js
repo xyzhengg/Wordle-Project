@@ -40,7 +40,7 @@ function onScreenKeyboardFunctionGuess () {
                     guess = guess.replaceAll(' ', '')
                     letterCounter ++
                 }
-                // console.log(guess)      
+                console.log(guess)      
         }) 
     }
 }
@@ -142,16 +142,19 @@ onScreenPlayAgain.addEventListener('click', playAgainButtonHide)
 
 function playAgainButtonHide () {
     onScreenPlayAgain.style.display = "none";
-    instructionButton.style.marginTop = "170px"
+    if (mediaQuery.matches) {document.querySelector(".instruction-button").style.marginTop = "170px"}
 }
 
 // Results Functions 
+const mediaQuery = window.matchMedia('(min-width: 600px)')
+
 closeResult.addEventListener('click', function () {
     displayResult.style.display = "none";
     theResults.style.display = "none";
     playAgainButton.style.display = "none";
     onScreenPlayAgain.style.display = "block";
-    document.querySelector(".instruction-button").style.marginTop = "10px";
+
+    if (mediaQuery.matches) {document.querySelector(".instruction-button").style.marginTop = "10px"}
 })
 
 theResults.addEventListener('click', function () {
@@ -159,7 +162,8 @@ theResults.addEventListener('click', function () {
     theResults.style.display = "none";
     playAgainButton.style.display = "none";
     onScreenPlayAgain.style.display = "block";
-    document.querySelector(".instruction-button").style.marginTop = "10px";
+    
+    if (mediaQuery.matches) {document.querySelector(".instruction-button").style.marginTop = "10px"}
 })
 
 
@@ -466,14 +470,13 @@ const closeAlert = document.querySelector('.close-alert')
 function checkGuess() {
     if (guess.toLowerCase() === "xinyu" && !wordList.includes("xinyu")) {
         alertContainer.style.display = "block";
-        alertWord.style.display = "block"
-        // debugger
+        alertWord.style.display = "block";
         document.querySelector('.notRealWord').classList.add("reuseXinYu")
         document.querySelector('.reuseXinYu').innerText = "You can only use the special word once per game"
     } else if (!wordList.includes(guess.toLowerCase())){
         alertContainer.style.display = "block";
-        alertWord.style.display = "block"
-        document.querySelector('.reuseXinYu').className = "notRealWord"
+        alertWord.style.display = "block";
+        document.querySelector('.reuseXinYu').className = "notRealWord";
         document.querySelector('.notRealWord').innerText = "That's not a real word!"
     } else if (wordList.includes(guess.toLowerCase())) {
         switchingSubmitFunctions()

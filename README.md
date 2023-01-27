@@ -51,5 +51,5 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 16. DONE Change alert word not real to a modal
 14. DONE Delay for winner and loser and xin yu functions
 14. DONE Flip tiles animation for special "Xin Yu" word
-15. Sound?
-17. Make it fit to different screen sizes?
+15. DONE Sound?
+17. DONE Make it fit to different screen sizes?
