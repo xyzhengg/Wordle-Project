@@ -109,6 +109,9 @@ function lose() {
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
+        let revealWord = document.querySelector(".win-xinyu-text")
+        // let randomWordUpper = randomWord.toUpperCase()
+        revealWord.innerText = `The word was "${randomWord.toUpperCase()}"`
     } 
     scoreCounter = 0
     score.innerText = scoreCounter
@@ -185,7 +188,6 @@ function resetGame() {
    score.innerText = scoreCounter
    wordList.push("xinyu")
 } 
-
 
 // Instruction Functions
 const instructionButton = document.querySelector(".instruction-button")

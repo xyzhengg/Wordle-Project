@@ -13,19 +13,18 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 2. Make it work with keyboard inputs, as well as on screen keyboard
 8. Need to show the answer if they lose
 3. Maybe have a restart button? But have to also make winning streak go back to 0
-4. Let person change letter typed after they chose a letter ONLY BEFORE they enter the whole word
-5. Must press a 'check' button to submit and check the word they chose
+4. Let person change letter typed after they chose a letter ONLY BEFORE they submit the whole word
+5. Must press a button to submit and check the word they chose
 6. Automatically move on the to next box after tying into one box
-7. After winning or losing, ot play again, there will be a "play again" button flashing
+7. After winning or losing, to play again, there will be a "play again" button flashing
 
-## Optional Functionality
-1. Could be fun if they win, make fireworks go off in the background (only if time allows)
-2. Add sound on button presses etc?
-3. NAH Be able to do language adaptations and select what language to use
-    e.g. german, french, latin, italian, dutch
-    e.g. american vs british spelling
-4. Could also make it allow more or less guesses!
-5. DONE Maybe a point system?
+## Extra Functions
+1. Add sound on button presses etc?
+2. DONE Maybe a scoring system?
+3. Resize screen for smaller devices
+4. Special word
+5. Flip animation
+6. Keyboard typing works
 
 ## Keeping Track of Things
 1. If win, tell em they won, and can have another go
@@ -62,8 +61,6 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 15. DONE Update instructions modal with pictures and instructions on points system
 16. Change alert word not real to a modal
 14. Delay for winner and loser and xin yu functions
-17. Add modal for when guessing the same word already guessed - maybe this can be part of the settings?
-13. Timer? In settings to make harder - get extra points!!!
 14. Flip tiles animation
 15. Sound?
 16. Keyboard function?
