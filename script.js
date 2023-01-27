@@ -40,7 +40,7 @@ function onScreenKeyboardFunctionGuess () {
                     guess = guess.replaceAll(' ', '')
                     letterCounter ++
                 }
-                console.log(guess)      
+                // console.log(guess)      
         }) 
     }
 }
