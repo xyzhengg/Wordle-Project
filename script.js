@@ -209,7 +209,7 @@ instructionButton.addEventListener('click', function() {
     instructions.style.display = "block";
     theInstructions.style.display = "block";
     function scrollToBottom() {
-        let scrollId
+        let scrollId;
         let height = 0;
         let minScrollHeight = 100;
         scrollId = setInterval(function () {
@@ -277,36 +277,26 @@ function pointsCounter () {
     if (guess.toLowerCase() === randomWord){
         if (letterCounter === 6) {
             scoreCounter = scoreCounter + 1200
-            score.innerText = scoreCounter
             scoreDisplay.innerText = "+1200"
-            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 12) {
             scoreCounter = scoreCounter + 900
-            score.innerText = scoreCounter
             scoreDisplay.innerText = "+900"
-            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 18) {
             scoreCounter = scoreCounter + 550
-            score.innerText = scoreCounter
             scoreDisplay.innerText = "+550"
-            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 24) {
             scoreCounter = scoreCounter + 300
-            score.innerText = scoreCounter
             scoreDisplay.innerText = "+300"
-            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 30) {
             scoreCounter = scoreCounter + 100
-            score.innerText = scoreCounter
             scoreDisplay.innerText = "+100"
-            currentScoreDisplay.innerText = `${scoreCounter} pts`
         } else if (letterCounter === 36) {
             scoreCounter = scoreCounter + 50
-            score.innerText = scoreCounter
             scoreDisplay.innerText = "+50"
-            currentScoreDisplay.innerText = `${scoreCounter} pts`
         }
     }
+    score.innerText = scoreCounter
+    currentScoreDisplay.innerText = `${scoreCounter} pts`
 }
 
 // Submit
