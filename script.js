@@ -9,8 +9,11 @@ console.log(randomWord)
 
 //Keyboard
 
+function guessedWord () {
+    guess = ''
+}
+guessedWord()
 
-let guess = ''
 let letterCounter = 0
 
 function onScreenKeyboardFunctionGuess () {
@@ -37,7 +40,7 @@ function onScreenKeyboardFunctionGuess () {
                     guess = guess.replaceAll(' ', '')
                     letterCounter ++
                 }
-                // console.log(guess)
+                console.log(guess)
                 
         }) 
     }
@@ -63,12 +66,6 @@ if (guess.toLowerCase() === randomWord){
     document.getElementById("playagain").style.display = "block";
     }  
 }
-
-function winTimeout() {
-    setTimeout(win, 3000)
-}
-
-// setTimeout(win, 2000)
 
 function winXinYu() {
     if (guess.toLowerCase() === "xinyu"){
@@ -110,7 +107,6 @@ function lose() {
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
         let revealWord = document.querySelector(".win-xinyu-text")
-        // let randomWordUpper = randomWord.toUpperCase()
         revealWord.innerText = `The word was "${randomWord.toUpperCase()}"`
     } 
     scoreCounter = 0
@@ -280,14 +276,12 @@ function submitFirstGuess () {
         
         randomWordIndex++
     }
-    letterCounter = 6
-    document.getElementById("6").id = "submitted"
-    // setTimeout(win, 200)
-    win()
-    winTimeout()
-    winXinYu()
-    pointsCounter()
-    // setTimeout(pointsCounter, 200)
+    letterCounter = 6;
+    document.getElementById("6").id = "submitted";
+    setTimeout(win, 800)
+    setTimeout(winXinYu, 800)
+    setTimeout(guessedWord, 800)
+    setTimeout(pointsCounter, 799)
 }
     
 function submitSecondGuess () {
@@ -308,9 +302,10 @@ function submitSecondGuess () {
     }
     letterCounter = 12
     document.getElementById("12").id = "submitted"
-    win()
-    winXinYu()
-    pointsCounter()
+    setTimeout(win, 800)
+    setTimeout(winXinYu, 800)
+    setTimeout(guessedWord, 800)
+    setTimeout(pointsCounter, 799)
 } 
 
 function submitThirdGuess () {
@@ -331,9 +326,10 @@ function submitThirdGuess () {
     }
     letterCounter = 18
     document.getElementById("18").id = "submitted"
-    win()
-    winXinYu()
-    pointsCounter()
+    setTimeout(win, 800)
+    setTimeout(winXinYu, 800)
+    setTimeout(guessedWord, 800)
+    setTimeout(pointsCounter, 799)
 } 
 
 function submitFourthGuess () {
@@ -354,9 +350,9 @@ function submitFourthGuess () {
     }
     letterCounter = 24
     document.getElementById("24").id = "submitted"
-    win()
-    winXinYu()
-    pointsCounter()
+    setTimeout(win, 800)
+    setTimeout(winXinYu, 800)
+    setTimeout(pointsCounter, 799)
 } 
 
 function submitFifthGuess () {
@@ -377,9 +373,9 @@ function submitFifthGuess () {
     }
     letterCounter = 30
     document.getElementById("30").id = "submitted"
-    win()
-    winXinYu()
-    pointsCounter()
+    setTimeout(win, 800)
+    setTimeout(winXinYu, 800)
+    setTimeout(pointsCounter, 799)
 } 
 
 function submitSixthGuess () {
@@ -400,10 +396,10 @@ function submitSixthGuess () {
     }
     letterCounter = 36
     document.getElementById("36").id = "submitted"
-    win()
-    winXinYu()
-    pointsCounter()
-    lose()
+    setTimeout(win, 800)
+    setTimeout(winXinYu, 800)
+    setTimeout(pointsCounter, 799)
+    setTimeout(lose, 800)
     }
     
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
@@ -422,6 +418,6 @@ function checkGuess() {
         alert("That's not a real word. Try again")
     } else if (wordList.includes(guess.toLowerCase())) {
         switchingSubmitFunctions()
-        guess=''
+        // guess=''
      } 
 }
