@@ -67,9 +67,21 @@ if (guess.toLowerCase() === randomWord){
     }  
 }
 
+function pinkWinXinYu() {
+    let xinyubox = document.querySelectorAll("#submitted")
+    if (guess.toLowerCase() === "xinyu") {
+        for (let i=xinyubox.length-6; i<xinyubox.length-1; i++) {
+            xinyubox[i].id = i+1
+            xinyubox[i].parentElement.style.backgroundColor = '#ff99e6'
+            xinyubox[i].classList.add('spintiles')
+        } 
+    }
+}
+
 function winXinYu() {
     if (guess.toLowerCase() === "xinyu"){
         console.log(guess)
+
         document.querySelector('.result').classList.add("win")
         document.querySelector('.win').innerText = "WINNER"
         
@@ -153,7 +165,7 @@ theResults.addEventListener('click', function () {
 
 function playAgain () {
     guess = ''
-    let box = document.querySelectorAll("#submitted")
+    let box = document.querySelectorAll(".output")
     for (let i=0; i<box.length; i++) {
         box[i].id = i+1
         box[i].innerText = ''
@@ -197,7 +209,7 @@ instructionButton.addEventListener('click', function() {
     instructions.style.display = "block";
     theInstructions.style.display = "block";
     function scrollToBottom() {
-        let scrollId;
+        let scrollId
         let height = 0;
         let minScrollHeight = 100;
         scrollId = setInterval(function () {
@@ -278,6 +290,7 @@ function submitFirstGuess () {
     }
     letterCounter = 6;
     document.getElementById("6").id = "submitted";
+    pinkWinXinYu()
     setTimeout(win, 800)
     setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
@@ -302,6 +315,7 @@ function submitSecondGuess () {
     }
     letterCounter = 12
     document.getElementById("12").id = "submitted"
+    pinkWinXinYu()
     setTimeout(win, 800)
     setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
@@ -326,6 +340,7 @@ function submitThirdGuess () {
     }
     letterCounter = 18
     document.getElementById("18").id = "submitted"
+    pinkWinXinYu()
     setTimeout(win, 800)
     setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
@@ -350,8 +365,10 @@ function submitFourthGuess () {
     }
     letterCounter = 24
     document.getElementById("24").id = "submitted"
+    pinkWinXinYu()
     setTimeout(win, 800)
     setTimeout(winXinYu, 800)
+    setTimeout(guessedWord, 800)
     setTimeout(pointsCounter, 799)
 } 
 
@@ -373,8 +390,10 @@ function submitFifthGuess () {
     }
     letterCounter = 30
     document.getElementById("30").id = "submitted"
+    pinkWinXinYu()
     setTimeout(win, 800)
     setTimeout(winXinYu, 800)
+    setTimeout(guessedWord, 800)
     setTimeout(pointsCounter, 799)
 } 
 
@@ -396,11 +415,13 @@ function submitSixthGuess () {
     }
     letterCounter = 36
     document.getElementById("36").id = "submitted"
+    pinkWinXinYu()
     setTimeout(win, 800)
     setTimeout(winXinYu, 800)
-    setTimeout(pointsCounter, 799)
+    setTimeout(guessedWord, 800)
     setTimeout(lose, 800)
-    }
+    setTimeout(pointsCounter, 799)
+}
     
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
 let submitFunction = 0
