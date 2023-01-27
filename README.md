@@ -24,7 +24,6 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 3. Resize screen for smaller devices
 4. DONE Special word "Xin Yu"
 5. DONE Flip animation for "Xin Yu" guess
-6. Keyboard typing works
 
 # Game Plan/ Progress
 1. DONE Function for coming up with the random word
@@ -49,9 +48,8 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 14. DONE Add +score to play again modal
 14. DONE Pulse on-screen play again button and make it orange
 15. DONE Update instructions modal with pictures and instructions on points system
-16. Change alert word not real to a modal
+16. DONE Change alert word not real to a modal
 14. DONE Delay for winner and loser and xin yu functions
 14. DONE Flip tiles animation for special "Xin Yu" word
 15. Sound?
-16. Keyboard function?
 17. Make it fit to different screen sizes?
