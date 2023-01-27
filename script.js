@@ -464,11 +464,21 @@ const closeAlert = document.querySelector('.close-alert')
     const alertContainer = document.querySelector('.alert')
 
 function checkGuess() {
-    if (!wordList.includes(guess.toLowerCase())){
+    if (guess.toLowerCase() === "xinyu" && !wordList.includes("xinyu")) {
         alertContainer.style.display = "block";
         alertWord.style.display = "block"
+        // debugger
+        document.querySelector('.notRealWord').classList.add("reuseXinYu")
+        document.querySelector('.reuseXinYu').innerText = "You can only use the special word once per game"
+    } else if (!wordList.includes(guess.toLowerCase())){
+        alertContainer.style.display = "block";
+        alertWord.style.display = "block"
+        document.querySelector('.reuseXinYu').className = "notRealWord"
+        document.querySelector('.notRealWord').innerText = "That's not a real word!"
     } else if (wordList.includes(guess.toLowerCase())) {
         switchingSubmitFunctions()
+        document.querySelector('.reuseXinYu').className = "notRealWord"
+        document.querySelector('.notRealWord').innerText = "That's not a real word!"
     } 
 }
 
