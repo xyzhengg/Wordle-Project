@@ -53,15 +53,22 @@ let highScore = document.querySelector('.highScore')
 highScore.innerText = highScoreCounter
 
 // Win Function
+
 function win() {
-    if (guess.toLowerCase() === randomWord){
-        document.querySelector('.result').classList.add("win")
-        document.querySelector('.win').innerText = "WINNER";
-        document.querySelector('.the-results').style.display = "block";
-        document.querySelector('.display-result').style.display = "block";
-        document.getElementById("playagain").style.display = "block";
+if (guess.toLowerCase() === randomWord){
+    document.querySelector('.result').classList.add("win")
+    document.querySelector('.win').innerText = "WINNER";
+    document.querySelector('.the-results').style.display = "block";
+    document.querySelector('.display-result').style.display = "block";
+    document.getElementById("playagain").style.display = "block";
     }  
 }
+
+function winTimeout() {
+    setTimeout(win, 3000)
+}
+
+// setTimeout(win, 2000)
 
 function winXinYu() {
     if (guess.toLowerCase() === "xinyu"){
@@ -82,8 +89,6 @@ function winXinYu() {
         wordList.pop("xinyu")
     }  
 }
-
-            
 
 // Lose Function
 function lose() {
@@ -109,9 +114,12 @@ function lose() {
     score.innerText = scoreCounter
 }
 
+
 // Play again buttons
 const playAgainButton = document.getElementById("playagain")
 playAgainButton.addEventListener('click', playAgain)
+playAgainButton.addEventListener('click', playAgainButtonHide)
+
 
 const displayResult = document.querySelector(".display-result")
 const closeResult = document.querySelector(".close-result")
@@ -125,6 +133,24 @@ function playAgainButtonHide () {
     onScreenPlayAgain.style.display = "none";
     instructionButton.style.marginTop = "170px"
 }
+
+// Results Functions 
+closeResult.addEventListener('click', function () {
+    displayResult.style.display = "none";
+    theResults.style.display = "none";
+    playAgainButton.style.display = "none";
+    onScreenPlayAgain.style.display = "block";
+    document.querySelector(".instruction-button").style.marginTop = "10px";
+})
+
+theResults.addEventListener('click', function () {
+    displayResult.style.display = "none";
+    theResults.style.display = "none";
+    playAgainButton.style.display = "none";
+    onScreenPlayAgain.style.display = "block";
+    document.querySelector(".instruction-button").style.marginTop = "10px";
+})
+
 
 function playAgain () {
     guess = ''
@@ -147,7 +173,6 @@ function playAgain () {
     document.getElementById('playagain').style.display = "none";
     displayResult.style.display = "none";
     theResults.style.display = "none";
-
     letterCounter = 0
     submitFunction = 0
 } 
@@ -161,27 +186,6 @@ function resetGame() {
    wordList.push("xinyu")
 } 
 
-// Results Functions 
-closeResult.addEventListener('click', function () {
-    displayResult.style.display = "none";
-    theResults.style.display = "none";
-    playAgainButton.style.display = "none";
-    onScreenPlayAgain.style.display = "block";
-    document.querySelector(".instruction-button").style.marginTop = "10px";
-})
-
-theResults.addEventListener('click', function () {
-    displayResult.style.display = "none";
-    theResults.style.display = "none";
-    playAgainButton.style.display = "none";
-    onScreenPlayAgain.style.display = "block";
-    document.querySelector(".instruction-button").style.marginTop = "10px";
-})
-
-theResults.addEventListener('click', function() {
-    theResults.style.display = "none";
-    displayResult.style.display = "none";
-})
 
 // Instruction Functions
 const instructionButton = document.querySelector(".instruction-button")
@@ -276,9 +280,12 @@ function submitFirstGuess () {
     }
     letterCounter = 6
     document.getElementById("6").id = "submitted"
+    // setTimeout(win, 200)
     win()
+    winTimeout()
     winXinYu()
     pointsCounter()
+    // setTimeout(pointsCounter, 200)
 }
     
 function submitSecondGuess () {
