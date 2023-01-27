@@ -75,7 +75,7 @@ function pinkWinXinYu() {
             xinyubox[i].classList.add('spintiles')
         } 
     }
-    setTimeout(winXinYu, 800)
+    setTimeout(winXinYu, 700)
 }
 
 function winXinYu() {
@@ -322,9 +322,9 @@ function submitFirstGuess () {
     letterCounter = 6;
     document.getElementById("6").id = "submitted";
     pinkWinXinYu()
-    setTimeout(win, 800)
-    setTimeout(guessedWord, 800)
-    setTimeout(pointsCounter, 799)
+    setTimeout(win, 700)
+    setTimeout(guessedWord, 700)
+    setTimeout(pointsCounter, 699)
 }
     
 function submitSecondGuess () {
@@ -346,9 +346,9 @@ function submitSecondGuess () {
     letterCounter = 12
     document.getElementById("12").id = "submitted"
     pinkWinXinYu()
-    setTimeout(win, 800)
-    setTimeout(guessedWord, 800)
-    setTimeout(pointsCounter, 799)
+    setTimeout(win, 700)
+    setTimeout(guessedWord, 700)
+    setTimeout(pointsCounter, 699)
 } 
 
 function submitThirdGuess () {
@@ -370,9 +370,9 @@ function submitThirdGuess () {
     letterCounter = 18
     document.getElementById("18").id = "submitted"
     pinkWinXinYu()
-    setTimeout(win, 800)
-    setTimeout(guessedWord, 800)
-    setTimeout(pointsCounter, 799)
+    setTimeout(win, 700)
+    setTimeout(guessedWord, 700)
+    setTimeout(pointsCounter, 699)
 } 
 
 function submitFourthGuess () {
@@ -394,9 +394,9 @@ function submitFourthGuess () {
     letterCounter = 24
     document.getElementById("24").id = "submitted"
     pinkWinXinYu()
-    setTimeout(win, 800)
-    setTimeout(guessedWord, 800)
-    setTimeout(pointsCounter, 799)
+    setTimeout(win, 700)
+    setTimeout(guessedWord, 700)
+    setTimeout(pointsCounter, 699)
 } 
 
 function submitFifthGuess () {
@@ -418,9 +418,9 @@ function submitFifthGuess () {
     letterCounter = 30
     document.getElementById("30").id = "submitted"
     pinkWinXinYu()
-    setTimeout(win, 800)
-    setTimeout(guessedWord, 800)
-    setTimeout(pointsCounter, 799)
+    setTimeout(win, 700)
+    setTimeout(guessedWord, 700)
+    setTimeout(pointsCounter, 699)
 } 
 
 function submitSixthGuess () {
@@ -442,10 +442,11 @@ function submitSixthGuess () {
     letterCounter = 36
     document.getElementById("36").id = "submitted"
     pinkWinXinYu()
-    setTimeout(win, 800)
-    setTimeout(guessedWord, 800)
-    setTimeout(lose, 800)
-    setTimeout(pointsCounter, 799)
+    setTimeout(win, 700)
+    setTimeout(guessedWord, 700)
+    setTimeout(lose, 700)
+    setTimeout(pointsCounter, 699)
+
 }
     
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
