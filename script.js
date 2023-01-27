@@ -76,6 +76,7 @@ function pinkWinXinYu() {
             xinyubox[i].classList.add('spintiles')
         } 
     }
+    setTimeout(winXinYu, 800)
 }
 
 function winXinYu() {
@@ -285,14 +286,12 @@ function submitFirstGuess () {
         character.parentElement.style.backgroundColor = "#A4A4A4";
         }
         character.id = "submitted"
-        
         randomWordIndex++
     }
     letterCounter = 6;
     document.getElementById("6").id = "submitted";
     pinkWinXinYu()
     setTimeout(win, 800)
-    setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
     setTimeout(pointsCounter, 799)
 }
@@ -317,7 +316,6 @@ function submitSecondGuess () {
     document.getElementById("12").id = "submitted"
     pinkWinXinYu()
     setTimeout(win, 800)
-    setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
     setTimeout(pointsCounter, 799)
 } 
@@ -342,7 +340,6 @@ function submitThirdGuess () {
     document.getElementById("18").id = "submitted"
     pinkWinXinYu()
     setTimeout(win, 800)
-    setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
     setTimeout(pointsCounter, 799)
 } 
@@ -367,7 +364,6 @@ function submitFourthGuess () {
     document.getElementById("24").id = "submitted"
     pinkWinXinYu()
     setTimeout(win, 800)
-    setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
     setTimeout(pointsCounter, 799)
 } 
@@ -392,7 +388,6 @@ function submitFifthGuess () {
     document.getElementById("30").id = "submitted"
     pinkWinXinYu()
     setTimeout(win, 800)
-    setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
     setTimeout(pointsCounter, 799)
 } 
@@ -417,7 +412,6 @@ function submitSixthGuess () {
     document.getElementById("36").id = "submitted"
     pinkWinXinYu()
     setTimeout(win, 800)
-    setTimeout(winXinYu, 800)
     setTimeout(guessedWord, 800)
     setTimeout(lose, 800)
     setTimeout(pointsCounter, 799)

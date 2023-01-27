@@ -22,19 +22,9 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 1. Add sound on button presses etc?
 2. DONE Maybe a scoring system?
 3. Resize screen for smaller devices
-4. Special word
-5. Flip animation
+4. DONE Special word "Xin Yu"
+5. DONE Flip animation for "Xin Yu" guess
 6. Keyboard typing works
-
-## Keeping Track of Things
-1. If win, tell em they won, and can have another go
-    - if possible each time they win, add to Winning Streak Counter
-        - might need some kind of thing/cookies? or some temp storage of the win
-
-2. If lose, tell em they lose and can try again
-    - make winning streak go back to 0
-
-3. Can maybe keep track of how many guesses it takes to win each time?
 
 # Game Plan/ Progress
 1. DONE Function for coming up with the random word
@@ -60,8 +50,8 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 14. DONE Pulse on-screen play again button and make it orange
 15. DONE Update instructions modal with pictures and instructions on points system
 16. Change alert word not real to a modal
-14. Delay for winner and loser and xin yu functions
-14. Flip tiles animation
+14. DONE Delay for winner and loser and xin yu functions
+14. DONE Flip tiles animation for special "Xin Yu" word
 15. Sound?
 16. Keyboard function?
 17. Make it fit to different screen sizes?
