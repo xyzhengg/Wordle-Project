@@ -23,7 +23,7 @@
             <button class="play-again-onscreen"> Play Again</button>
             <button class="instruction-button">Instructions</button>
             <button id="reset">New Game</button>
-            <button class="settings-button">Settings</button>
+            <button class="settings-button">Sound On</button>
             <p class="github"> GitHub @xyzhengg</p>
         </section>
 
@@ -61,6 +61,16 @@
               </div>
             
         </section>
+
+        <audio class="clickSound">
+            <source src="./Sounds/keyboard-click-sound.wav" type="audio/wav">
+        </audio>
+        <audio class="submitButtonSound">
+            <source src="./Sounds/submit-button-sound.wav" type="audio/wav">
+        </audio>
+        <!-- <audio class="sidePanelSound">
+            <source src="./Sounds/side-panel-sound.wav" type="audio/wav">
+        </audio> -->
 
         <section class="wordle-grid">
             <div class="word1">
@@ -211,9 +221,6 @@
                 <button id="submit" >Submit</button>
             </div>
         </section>
-        <footer>
-        </footer>
-
       <script src="./script.js" async defer></script> 
     </body>
 </html>

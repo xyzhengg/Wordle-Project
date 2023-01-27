@@ -40,8 +40,7 @@ function onScreenKeyboardFunctionGuess () {
                     guess = guess.replaceAll(' ', '')
                     letterCounter ++
                 }
-                console.log(guess)
-                
+                // console.log(guess)      
         }) 
     }
 }
@@ -233,6 +232,44 @@ theInstructions.addEventListener('click', function() {
     instructions.style.display = "none";
     theInstructions.style.display = "none";
 })
+
+// Sound Button
+
+const sound = document.querySelector('.settings-button')
+const buttons = document.querySelectorAll('button')
+const submitButton = document.getElementById('submit')
+
+soundOn()
+
+sound.addEventListener('click', toggleSound)
+function toggleSound () {
+    if (sound.innerText === "Sound On") {
+        sound.innerText = "Sound Off"
+        soundOff()
+    } else if (sound.innerText === "Sound Off") {
+        sound.innerText = "Sound On"
+        soundOn()
+    }
+}
+function soundOff () {
+    buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        document.querySelector('.clickSound').pause()
+    })
+    submitButton.addEventListener('click', () => document.querySelector('.submitButtonSound').pause())
+    })
+}
+
+function soundOn () {
+    buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        document.querySelector('.clickSound').play()
+    })
+    submitButton.addEventListener('click', () => document.querySelector('.submitButtonSound').play())
+    })
+} 
+
+// Score Display
 
 const scoreDisplay = document.querySelector(".plus-points")
 const currentScoreDisplay = document.querySelector(".current-score")
@@ -427,6 +464,9 @@ function switchingSubmitFunctions() {
     // Submit Button Function 
 let submit = document.getElementById('submit')
 submit.addEventListener('click', checkGuess)
+submit.addEventListener('click', function() {
+    document.querySelector('.submitButtonSound').play()
+})
 
 function checkGuess() {
     if (!wordList.includes(guess.toLowerCase())){
