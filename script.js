@@ -458,11 +458,26 @@ submit.addEventListener('click', function() {
     document.querySelector('.submitButtonSound').play()
 })
 
+// Alert Modal
+const closeAlert = document.querySelector('.close-alert')
+    const alertWord = document.querySelector('.alertWord')
+    const alertContainer = document.querySelector('.alert')
+
 function checkGuess() {
     if (!wordList.includes(guess.toLowerCase())){
-        alert("That's not a real word. Try again")
+        alertContainer.style.display = "block";
+        alertWord.style.display = "block"
     } else if (wordList.includes(guess.toLowerCase())) {
         switchingSubmitFunctions()
-        // guess=''
-     } 
+    } 
 }
+
+ closeAlert.addEventListener('click', function() {
+    alertContainer.style.display = "none";
+    alertWord.style.display = "none"
+ })
+
+alertContainer.addEventListener('click', function() {
+    alertWord.style.display = "none";
+    alertContainer.style.display = "none";
+})
