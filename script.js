@@ -90,12 +90,12 @@ function winXinYu() {
         document.querySelector('.plus-points').innerText = "+10,000"
         scoreCounter = scoreCounter + 10000
         score.innerText = scoreCounter
-
+        wordList.pop()
         currentScoreDisplay.innerText = `${scoreCounter}pts`
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
-        wordList.pop("xinyu")
+        
     }  
 }
 
