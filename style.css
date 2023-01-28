@@ -390,19 +390,21 @@ h1 {
     /* INSTRUCTIONS DISPLAY FUNCTION */
     .instructions {
         position: absolute;
-        padding: 15px;
+        padding:6px;
         padding-top: 15px;
-        width: 335px;
-        height: 730px;
+        width: 330px;
+        height: 710px;
         margin-top: 10px;
-        left: 5px;
+        margin-bottom: 5px;
+        margin-left: 2px;
         right: 10px;
+        font-size: 15px;
     }
 
     .bring,
     .bingo,
     .xinyu {
-        width: 300px
+        width: 260px
     }
 
     /* ALERT STYLING */ 
