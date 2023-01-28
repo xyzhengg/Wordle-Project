@@ -23,7 +23,7 @@ function onScreenKeyboardFunctionGuess () {
         keyElement.addEventListener('click', function() {
             let id = letterCounter+1
             let output = document.getElementById(id);
-            // console.log(id)
+            console.log(id)
             switch (key) {
                 case 'Backspace':
                     let removeOutput = document.getElementById(letterCounter)
@@ -40,7 +40,7 @@ function onScreenKeyboardFunctionGuess () {
                     guess = guess.replaceAll(' ', '')
                     letterCounter ++
                 }
-                // console.log(guess)      
+                console.log(guess)      
         }) 
     }
 }
@@ -101,7 +101,7 @@ function winXinYu() {
 
 // Lose Function
 function lose() {
-    if ((guess.toLowerCase() !== randomWord) && (letterCounter === 36)){
+    if (!guess.toLowerCase() === randomWord && letterCounter === 36){
         document.querySelector('.result').classList.add("lost")
         if (scoreCounter > highScoreCounter) {
             highScoreCounter = scoreCounter
