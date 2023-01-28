@@ -195,6 +195,8 @@ function resetGame() {
    playAgain()
    scoreCounter = 0
    score.innerText = scoreCounter
+   highScoreCounter = scoreCounter
+   highScore.innerText = highScoreCounter
    wordList.push("xinyu")
 } 
 
