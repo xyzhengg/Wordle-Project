@@ -470,7 +470,7 @@ function checkGuess() {
         alertContainer.style.display = "block";
         alertWord.style.display = "block";
         document.querySelector('.reuseXinYu').className = "notRealWord";
-        document.querySelector('.notRealWord').innerText = "That's not a real word!"
+        document.querySelector('.notRealWord').innerText = "That's not a valid word!"
     } else if (wordList.includes(guess.toLowerCase())) {
         switchingSubmitFunctions()
     } 
