@@ -405,7 +405,6 @@ function submitFifthGuess () {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
             character.parentElement.style.backgroundColor = "#51B051";
-            
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
@@ -429,7 +428,6 @@ function submitSixthGuess () {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
             character.parentElement.style.backgroundColor = "#51B051";
-            
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
@@ -446,7 +444,6 @@ function submitSixthGuess () {
     setTimeout(guessedWord, 700)
     setTimeout(lose, 700)
     setTimeout(pointsCounter, 699)
-
 }
     
 const allSubmitFunctions = [submitFirstGuess, submitSecondGuess, submitThirdGuess, submitFourthGuess, submitFifthGuess, submitSixthGuess]
