@@ -83,7 +83,7 @@ function winXinYu() {
         console.log(guess)
 
         wordList.pop()
-        console.log(wordList.indexOf("xinyu"))
+        // console.log(wordList.indexOf("xinyu"))
         document.querySelector('.result').classList.add("win")
         document.querySelector('.win').innerText = "WINNER"
         
@@ -102,7 +102,7 @@ function winXinYu() {
 
 // Lose Function
 function lose() {
-    debugger
+    // debugger
     if (!(guess.toLowerCase() == randomWord) && letterCounter === 36){
         document.querySelector('.result').classList.add("lost")
         document.querySelector('.lost').innerText = "Game Over"
