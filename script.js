@@ -114,7 +114,6 @@ function lose() {
             document.querySelector('.lost').innerText = "Game Over"
             currentScoreDisplay.innerText = `${scoreCounter}`
         }
-        console.log("lost")
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
@@ -124,7 +123,6 @@ function lose() {
     scoreCounter = 0
     score.innerText = scoreCounter
 }
-
 
 // Play again buttons
 const playAgainButton = document.getElementById("playagain")
@@ -166,7 +164,6 @@ theResults.addEventListener('click', function () {
     if (mediaQuery.matches) {document.querySelector(".instruction-button").style.marginTop = "10px"}
 })
 
-
 function playAgain () {
     guess = ''
     let box = document.querySelectorAll(".output")
@@ -205,7 +202,6 @@ function resetGame() {
 const instructionButton = document.querySelector(".instruction-button")
 const instructions = document.querySelector(".instructions")
 const theInstructions = document.querySelector(".the-instructions")
-
 
 // Scroll code referenced from  https://gist.github.com/sabapathygithub/e6ca2c0fd06c21c5fb608b9a172ca3c4
 
@@ -333,7 +329,6 @@ function submitSecondGuess () {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
             character.parentElement.style.backgroundColor = "#51B051";
-            
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
@@ -357,7 +352,6 @@ function submitThirdGuess () {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
             character.parentElement.style.backgroundColor = "#51B051";
-            
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
@@ -381,7 +375,6 @@ function submitFourthGuess () {
         let character = document.getElementById(i)
         if (character.innerText.toLowerCase() === randomWord[randomWordIndex]) {
             character.parentElement.style.backgroundColor = "#51B051";
-            
         } else if 
        (randomWord.includes(character.innerText.toLowerCase())) {
             character.parentElement.style.backgroundColor = "orange";
