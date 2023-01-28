@@ -23,7 +23,7 @@ function onScreenKeyboardFunctionGuess () {
         keyElement.addEventListener('click', function() {
             let id = letterCounter+1
             let output = document.getElementById(id);
-            console.log(id)
+            // console.log(id)
             switch (key) {
                 case 'Backspace':
                     let removeOutput = document.getElementById(letterCounter)
@@ -40,7 +40,7 @@ function onScreenKeyboardFunctionGuess () {
                     guess = guess.replaceAll(' ', '')
                     letterCounter ++
                 }
-                console.log(guess)      
+                // console.log(guess)      
         }) 
     }
 }
@@ -95,23 +95,23 @@ function winXinYu() {
         document.querySelector('.the-results').style.display = "block";
         document.querySelector('.display-result').style.display = "block";
         document.getElementById("playagain").style.display = "block";
-        
     }  
 }
 
 // Lose Function
 function lose() {
-    if (!guess.toLowerCase() === randomWord && letterCounter === 36){
+    debugger
+    if (!(guess.toLowerCase() == randomWord) && letterCounter === 36){
         document.querySelector('.result').classList.add("lost")
+        document.querySelector('.lost').innerText = "Game Over"
         if (scoreCounter > highScoreCounter) {
             highScoreCounter = scoreCounter
             highScore.innerText = highScoreCounter
-            document.querySelector('.lost').innerText = "Game Over"
+            
             document.querySelector('.plus-points').classList.add("new-high-score")
             document.querySelector('.new-high-score').innerText = "Wow! New High Score!"
             currentScoreDisplay.innerText = `${highScoreCounter}pts`
         } else {
-            document.querySelector('.lost').innerText = "Game Over"
             currentScoreDisplay.innerText = `${scoreCounter}`
         }
         document.querySelector('.the-results').style.display = "block";
@@ -435,9 +435,9 @@ function submitSixthGuess () {
     letterCounter = 36
     document.getElementById("36").id = "submitted"
     pinkWinXinYu()
+    setTimeout(lose, 700)
     setTimeout(win, 700)
     setTimeout(guessedWord, 700)
-    setTimeout(lose, 700)
     setTimeout(pointsCounter, 699)
 }
     
