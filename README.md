@@ -1,6 +1,6 @@
 # Wordle-Project
 To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
-hello
+
 5 letter word
 - need to be able to check letter position if correct or not
     - if correct, append the letter to the whole column where it belongs and highlight green
@@ -53,3 +53,5 @@ hello
 14. DONE Flip tiles animation for special "Xin Yu" word
 15. DONE Sound?
 17. DONE Make it fit to different screen sizes?
+
+
