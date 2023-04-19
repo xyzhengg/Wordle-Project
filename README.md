@@ -53,3 +53,5 @@ To play the game, [click here](https://xyzhengg.github.io/Wordle-Project/)
 14. DONE Flip tiles animation for special "Xin Yu" word
 15. DONE Sound?
 17. DONE Make it fit to different screen sizes?
+
+
